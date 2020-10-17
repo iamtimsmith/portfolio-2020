@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaLinkedinIn, FaTwitter, FaGithub, FaDev, FaEnvelope} from 'react-icons/fa';
-// import {BackToTop} from 'components';
+import {BackToTop} from 'components';
 import {Aside, Nav, Icon} from './social.style';
 
 const sites = [
@@ -15,7 +15,7 @@ export const Social = () => {
 	return (
 		<Aside>
 			<Nav aria-label='social nav'>
-				{/* <BackToTop /> */}
+				<BackToTop />
 				{sites.map((site, key) => (
 					<Icon
 						key={key}

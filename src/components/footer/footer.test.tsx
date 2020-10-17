@@ -14,7 +14,8 @@ describe(`<Footer />`, () => {
 	});
 
 	it(`renders the heart`, () => {
-		const {debug} = render(<Footer />);
-		debug();
+		const {queryByTestId} = render(<Footer />);
+		const heart = queryByTestId(`heart`);
+		expect(heart).toBeInTheDocument();
 	});
 });

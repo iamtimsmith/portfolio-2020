@@ -64,7 +64,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "check": "tsc --pretty && eslint . --ext .ts,.tsx",
-    "test": "jest --watch --silent"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
