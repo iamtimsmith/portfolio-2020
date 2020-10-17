@@ -16,10 +16,25 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "@types/node": "^14.11.10",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-icons": "^3.0.0",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
   },
   "keywords": [
     "gatsby"
@@ -27,11 +42,12 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop -p 1125",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+		"clean": "gatsby clean",
+		"check": "tsc --pretty && eslint . --ext .ts,.tsx",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
