@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'gatsby';
 import {media} from 'styles';
 import {ILogo} from './header.i';
 
@@ -16,16 +15,18 @@ export const Container = styled.div`
 	padding: 15px 0;
 `;
 
-export const Logo = styled(Link)<ILogo>`
-	background: none !important;
+export const Logo = styled.div<ILogo>`
 	visibility: ${props => props.show ? `visible` : `hidden`};
-	font-size: 3.6rem;
-	font-weight: 800;
-	text-transform: uppercase;
-	cursor: pointer;
+	a {
+		background: none !important;
+		font-size: 3.6rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		cursor: pointer;
 
-	&:after {
-		display: none;
+		&:after {
+			display: none;
+		}
 	}
 `;
 

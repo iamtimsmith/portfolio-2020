@@ -6,7 +6,9 @@ export const Header = () => {
 	return (
 		<Navbar>
 			<Container>
-				<Logo to='/' show={true}>Tim Smith</Logo>
+				<Logo show={true}>
+					<Link to='/'>Tim Smith</Link>
+				</Logo>
 				<Nav>
 					<Link to='/projects'>Projects</Link>
 					<Link to='/blog'>Blog</Link>

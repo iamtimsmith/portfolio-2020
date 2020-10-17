@@ -1,2 +1,3 @@
-export {Header} from 'components/header/header';
 export {Layout} from 'components/layout/layout';
+export {Header} from 'components/header/header';
+export {Footer} from 'components/footer/footer';
