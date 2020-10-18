@@ -10,9 +10,9 @@ export const Header = () => {
 				<Logo show={true}>
 					<Link to='/'>Tim Smith</Link>
 				</Logo>
-				<Nav>
-					<Link to='/projects'>Projects</Link>
-					<Link to='/blog'>Blog</Link>
+				<Nav data-testid='main'>
+					<Link to='/projects' data-testid='navprojects'>Projects</Link>
+					<Link to='/blog' data-testid='navblog'>Blog</Link>
 				</Nav>
 				<Offcanvas />
 			</Container>

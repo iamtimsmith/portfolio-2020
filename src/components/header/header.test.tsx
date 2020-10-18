@@ -14,17 +14,17 @@ describe(`<Header />`, () => {
 	});
 
 	it(`Shows the menu`, () => {
-		const {queryByRole} = render(<Header />);
-		expect(queryByRole(`navigation`)).toBeInTheDocument();
+		const {queryByTestId} = render(<Header />);
+		expect(queryByTestId(`main`)).toBeInTheDocument();
 	});
 
 	it(`Shows the projects link`, () => {
-		const {queryByRole} = render(<Header />);
-		expect(queryByRole(`link`, {name: /projects/i})).toBeInTheDocument();
+		const {queryByTestId} = render(<Header />);
+		expect(queryByTestId(`navprojects`)).toBeInTheDocument();
 	});
 
 	it(`Shows the blogs link`, () => {
-		const {queryByRole} = render(<Header />);
-		expect(queryByRole(`link`, {name: /blog/i})).toBeInTheDocument();
+		const {queryByTestId} = render(<Header />);
+		expect(queryByTestId(`navblog`)).toBeInTheDocument();
 	});
 });

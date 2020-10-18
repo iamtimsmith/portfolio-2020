@@ -26,10 +26,22 @@ export const Offcanvas = () => {
 				<span />
 			</Toggle>
 			<Aside show={store.offcanvas}>
-				<Nav>
-					<Link to='/' onClick={() => handleToggle(false)}>Home</Link>
-					<Link to='/projects' onClick={() => handleToggle(false)}>Projects</Link>
-					<Link to='/blog' onClick={() => handleToggle(false)}>Blog</Link>
+				<Nav data-testid='mobile'>
+					<Link
+						to='/'
+						onClick={() => handleToggle(false)}
+						data-testid='mobilehome'
+					>Home</Link>
+					<Link
+						to='/projects'
+						onClick={() => handleToggle(false)}
+						data-testid='mobileprojects'
+					>Projects</Link>
+					<Link
+						to='/blog'
+						onClick={() => handleToggle(false)}
+						data-testid='mobileblog'
+					>Blog</Link>
 				</Nav>
 				<Social>
 					{sites.map((site, key) => (
