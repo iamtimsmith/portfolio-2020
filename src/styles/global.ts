@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
 		--teal-800: #0e3f35;
 		--teal-900: #001612;
 		// Typography
-		--sans-serif: Open Sans, sans-serif;
+		--sans-serif: sans-serif;
 		--h1: 3.6rem;
 		--h2: 3.2rem;
 		--h3: 2.8rem;
