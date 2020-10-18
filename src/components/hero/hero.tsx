@@ -14,7 +14,7 @@ export const Hero = ({title, content, image}: IHero) => {
 					<p>{content}</p>
 				</Copy>
 				<Figure>
-					<Img fixed={image} alt={title} />
+					<Img fluid={image} alt={title} />
 				</Figure>
 			</Content>
 		</Section>

@@ -100,6 +100,12 @@ export const Figure = styled.figure`
 		order: 2;
 	}
 
+	.gatsby-image-wrapper {
+		${media.extrawide} {
+			width: 500px;
+		}
+	}
+
 	picture, img {
 		opacity: 0.7;
 		max-width: 100%;

@@ -94,4 +94,16 @@ export const GlobalStyles = createGlobalStyle`
 			background-position: 0px 100%;
 		}
 	}
+
+	.gatsby-image-wrapper {
+		position: relative;
+
+		[aria-hidden='true'] {
+			display: none !important;
+		}
+
+		picture, img {
+			position: relative !important;
+		}
+	}
 `;

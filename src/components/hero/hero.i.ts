@@ -1,7 +1,7 @@
-import {FixedObject} from 'gatsby-image';
+import {FluidObject} from 'gatsby-image';
 
 export interface IHero {
 	title: string;
 	content: string;
-	image: FixedObject;
+	image: FluidObject;
 }
