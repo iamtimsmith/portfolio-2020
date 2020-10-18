@@ -12,7 +12,7 @@ export const Container = styled.main`
 		padding: 0 150px;
 	}
 	${media.extrawide} {
-		max-width: 1600px;
-		padding: 0;
+		max-width: 1400px;
+		padding: 0 15px;
 	}
 `;
