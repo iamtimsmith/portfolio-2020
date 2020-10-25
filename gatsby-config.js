@@ -10,24 +10,38 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/images`,
       },
 		},
 		{
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `700`]
-          },
-        ],
+        name: `posts`,
+        path: `${__dirname}/content/blog`,
       },
-    },
+		},
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				gfm: true,
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 1600,
+							linkImagesToOriginal: false,
+							showCaptions: true,
+							withWebp: true,
+						},
+					},
+				],
+			},
+		},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,7 +51,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/images/timsmith-teal.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

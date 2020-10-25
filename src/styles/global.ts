@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
-import {reset, link} from 'styles';
+import {link} from 'components/link/link.style';
+import {reset} from 'styles';
 
 export const GlobalStyles = createGlobalStyle`
 	${reset}
@@ -62,7 +63,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	h1, h2, h3, h4, h5 {
 		text-transform: uppercase;
-		line-height: var(--lh);
+		line-height: 1.3;
 		font-weight: 700;
 	}
 	h1 {
