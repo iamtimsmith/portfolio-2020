@@ -7,3 +7,4 @@ export {Hero} from 'components/hero/hero';
 export {SectionTitle} from 'components/sectionTitle/sectionTitle';
 export {Summary, Row} from 'components/summary/summary';
 export {Link} from 'components/link/link';
+export {Showcase} from 'components/showcase/showcase';

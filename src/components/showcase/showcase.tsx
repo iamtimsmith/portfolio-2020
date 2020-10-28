@@ -1,0 +1,77 @@
+import React, {useRef, useEffect, useState} from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import {Link} from 'components';
+import {Section, Image, Content, Markdown, Button, Tags} from './showcase.style';
+import {IProps} from './showcase.i';
+
+export const Showcase = ({image, title, content, link, align='right', date, tags, button=false}: IProps) => {
+	const section = useRef<HTMLElement>(null);
+	const [show, setShow] = useState(false);
+
+	const handleAnimate = () => {
+		const scroll = window.scrollY + window.innerHeight;
+		const element = section.current ? section.current.offsetTop + 200 : 0;
+		if (scroll > element) setShow(true);
+	}
+
+	useEffect(() => {
+		handleAnimate();
+		addEventListener(`scroll`, handleAnimate);
+		return () => removeEventListener(`scroll`, handleAnimate);
+	}, [])
+
+	return (
+		<Section ref={section} data-testid='showcase'>
+			<Image align={align}>
+				<Img fluid={image} alt={title.text} />
+			</Image>
+			<Content align={align} show={show}>
+				<small>{date}</small>
+				{link.title && title.type === `h2` &&
+					<h2>
+						<Link to={link.to}>{title.text}</Link>
+					</h2>
+				}
+				{link.title && title.type === `h3` &&
+					<h3>
+						<Link to={link.to}>{title.text}</Link>
+					</h3>
+				}
+				{!link.title && title.type === `h2` &&
+					<h2>{title.text}</h2>
+				}
+				{!link.title && title.type === `h3` &&
+					<h3>{title.text}</h3>
+				}
+				<Tags>{tags}</Tags>
+				{content &&
+					<Markdown dangerouslySetInnerHTML={{__html: content}} />
+				}
+				{!link.title && button &&
+					<Link to={link.to}>
+						<Button>{link.text}</Button>
+					</Link>
+				}
+				{!link.title && !button &&
+					<Link to={link.to}>{link.text}</Link>
+				}
+			</Content>
+		</Section>
+	);
+};
+
+Showcase.propTypes = {
+	image: PropTypes.object,
+	title: PropTypes.object,
+	content: PropTypes.oneOfType([
+		PropTypes.object,
+		PropTypes.string,
+	]),
+	link: PropTypes.object,
+	align: PropTypes.string,
+	date: PropTypes.string,
+	tags: PropTypes.string,
+	type: PropTypes.string,
+	button: PropTypes.bool,
+}

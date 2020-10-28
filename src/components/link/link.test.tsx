@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import {Link} from './link';
+import {Link} from 'components';
 
 describe(`<Link />`, () => {
 	it(`renders the link`, () => {

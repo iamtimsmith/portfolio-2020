@@ -7,7 +7,7 @@ import {IHero} from './hero.i';
 
 export const Hero = ({title, content, image}: IHero) => {
 	return (
-		<Section aria-label='hero section'>
+		<Section data-testid='hero'>
 			<Content>
 				<Copy>
 					<h1 dangerouslySetInnerHTML={{__html: title}} />

@@ -38,17 +38,18 @@ exports.createPages = ({graphql, actions}) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions;
 	if (node.internal.type === `MarkdownRemark`) {
-		const path = getNode(node.parent).relativePath;
-
-		createNodeField({
-			node,
-			name: `slug`,
-			value: `/blog/${getSlug(path)}`
-		});
+		const post = getNode(node.parent);
+		if (post.sourceInstanceName === 'posts') {
+			createNodeField({
+				node,
+				name: `slug`,
+				value: `/blog/${getSlug(post.relativePath)}`
+			});
+		}
 		createNodeField({
 			node,
 			name: `date`,
-			value: getDate(path)
+			value: getDate(post.relativePath)
 		});
 	}
 }

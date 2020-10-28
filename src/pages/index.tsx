@@ -1,10 +1,10 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import {FluidObject} from 'gatsby-image';
-import {Layout, Hero, SectionTitle, Summary, Row} from 'components';
+import {Layout, Hero, SectionTitle, Summary, Row, Showcase} from 'components';
 
 const IndexPage = ({data}: IProps) => {
-
+	console.log(data);
 	return (
 		<Layout>
 			<Hero
@@ -31,6 +31,20 @@ const IndexPage = ({data}: IProps) => {
 					/>
 				))}
 			</Row>
+			<React.Fragment>
+				{data.projects.nodes.map((project, key) => (
+					<Showcase
+						key={key}
+						title={{text: project.frontmatter.title, type: `h3`}}
+						content={project.html}
+						link={{to: project.frontmatter.url, text: `Visit Site`}}
+						image={project.frontmatter.featured_image.childImageSharp.fluid}
+						align={key % 2 === 0 ? `left` : `right`}
+						date={project.fields.date}
+						tags={project.frontmatter.tags}
+					/>
+				))}
+			</React.Fragment>
 		</Layout>
 	);
 }
@@ -69,6 +83,30 @@ export const query = graphql`
 				excerpt(truncate:true)
 			}
 		}
+		projects: allMarkdownRemark(
+			filter:{fileAbsolutePath:{regex:"/projects/ig"}}
+			sort:{fields:fields___date, order:DESC}
+			limit:3
+		) {
+			nodes {
+				frontmatter {
+					title
+					featured_image {
+						childImageSharp {
+							fluid(maxWidth: 400) {
+								...GatsbyImageSharpFluid_withWebp_noBase64
+							}
+						}
+					}
+					tags
+					url
+				}
+				fields {
+					date(formatString: "YYYY")
+				}
+				html
+			}
+		}
 	}
 `;
 
@@ -78,7 +116,7 @@ export interface IProps {
 			childImageSharp: {
 				fluid: FluidObject;
 			}
-		}
+		};
 		recentPosts: {
 			nodes: [{
 				frontmatter: {
@@ -94,6 +132,24 @@ export interface IProps {
 					slug: string;
 				}
 				excerpt: string;
+			}]
+		}
+		projects: {
+			nodes: [{
+				frontmatter: {
+					title: string;
+					featured_image: {
+						childImageSharp: {
+							fluid: FluidObject;
+						}
+					};
+					tags: string;
+					url: string;
+				}
+				fields: {
+					date: string;
+				}
+				html: string;
 			}]
 		}
 	};
