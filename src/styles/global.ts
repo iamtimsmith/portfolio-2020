@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import {link} from 'components/link/link.style';
+// import {link} from 'components/link/link.style';
 import {reset} from 'styles';
 
 export const GlobalStyles = createGlobalStyle`

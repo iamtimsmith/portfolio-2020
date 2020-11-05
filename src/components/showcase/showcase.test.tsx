@@ -31,9 +31,21 @@ const props = {
 
 describe(`<Showcase />`, () => {
 	it(`renders the showcase`, () => {
-		const {debug, queryByTestId} = render(<Showcase {...props}/>);
-		debug();
+		const {queryByTestId} = render(<Showcase {...props}/>);
 		const showcase = queryByTestId(`showcase`);
 		expect(showcase).toBeInTheDocument();
+	});
+
+	it(`renders the title as an h2`, () => {
+		const {queryByRole} = render(<Showcase {...props}/>);
+		const title = queryByRole(`heading`, {level: 2});
+		expect(title).toBeInTheDocument();
+	});
+
+	it(`renders the title as an h3`, () => {
+		props.title.type = `h3`;
+		const {queryByRole} = render(<Showcase {...props}/>);
+		const title = queryByRole(`heading`, {level: 3});
+		expect(title).toBeInTheDocument();
 	});
 });
