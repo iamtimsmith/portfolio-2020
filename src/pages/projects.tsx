@@ -14,7 +14,7 @@ const ProjectsPage = ({data}: IProps) => {
 						key={id}
 						title={{text: project.frontmatter.title, type: `h2`}}
 						image={project.frontmatter.featured_image.childImageSharp.fluid}
-						date={project.fields.date}
+						date={{date: project.fields.date, year: true}}
 						content={project.html}
 						tags={project.frontmatter.tags}
 						link={{to: project.frontmatter.url, text: `Visit Site`}}

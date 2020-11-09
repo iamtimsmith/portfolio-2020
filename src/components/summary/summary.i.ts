@@ -5,6 +5,7 @@ export interface IProps {
 	title: string;
 	as?: string;
 	content: string;
+	date?: string;
 	image: FluidObject;
 	tags: string[];
 	link: {

@@ -18,4 +18,8 @@ export const BackToTopStyle = styled.button<IBackToTop>`
 	${media.desktop} {
 		display: flex;
 	}
+
+	svg {
+		font-size: 2rem;
+	}
 `;

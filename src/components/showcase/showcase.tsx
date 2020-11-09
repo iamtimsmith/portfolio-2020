@@ -28,7 +28,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 				<Img fluid={image} alt={title.text} />
 			</Image>
 			<Content align={align} show={show}>
-				<small data-testid='date'>{dayjs(date).format(`YYYY`)}</small>
+				{date && <small data-testid='date'>{dayjs(date.date).format(date.year ? `YYYY` : `MM-DD-YYYY`)}</small>}
 				{link.title && title.type === `h2` &&
 					<h2>
 						<Link to={link.to}>{title.text}</Link>
@@ -71,7 +71,7 @@ Showcase.propTypes = {
 	]),
 	link: PropTypes.object,
 	align: PropTypes.string,
-	date: PropTypes.string,
+	date: PropTypes.object,
 	tags: PropTypes.string,
 	type: PropTypes.string,
 	button: PropTypes.bool,

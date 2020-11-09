@@ -15,6 +15,7 @@ export const Row = styled.div`
 
 export const Article = styled.article`
 	position: relative;
+	margin-bottom: 100px;
 
 	> a:hover + h2 a {
 		background-position: 0px 100%;
@@ -23,6 +24,10 @@ export const Article = styled.article`
 
 export const Content = styled.p`
 	margin: 20px 0 10px;
+`;
+
+export const SummaryDate = styled.p`
+	color: var(--grey-200);
 `;
 
 export const Tags = styled.p`

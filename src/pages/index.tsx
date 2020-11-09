@@ -44,7 +44,7 @@ const IndexPage = ({data}: IProps) => {
 						link={{to: project.frontmatter.url, text: `Visit Site`}}
 						image={project.frontmatter.featured_image.childImageSharp.fluid}
 						align={key % 2 === 0 ? `right` : `left`}
-						date={project.fields.date}
+						date={{date: project.fields.date, year: true}}
 						tags={project.frontmatter.tags}
 					/>
 				))}
