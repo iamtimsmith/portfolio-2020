@@ -8,19 +8,20 @@ const ProjectsPage = ({data}: IProps) => {
 	return (
 		<Layout>
 			<PageTitle title='Projects' />
-			{data.projects.nodes.map((project, id: number) => (
-				<Showcase
-					id={id}
-					key={id}
-					title={{text: project.frontmatter.title, type: `h2`}}
-					image={project.frontmatter.featured_image.childImageSharp.fluid}
-					date={project.fields.date}
-					content={project.html}
-					tags={project.frontmatter.tags}
-					link={{to: project.frontmatter.url, text: `Visit Site`}}
-					align={id % 2 === 0 ? `right` : `left`}
-				/>
-			))}
+			<React.Fragment>
+				{data.projects.nodes.map((project, id: number) => (
+					<Showcase
+						key={id}
+						title={{text: project.frontmatter.title, type: `h2`}}
+						image={project.frontmatter.featured_image.childImageSharp.fluid}
+						date={project.fields.date}
+						content={project.html}
+						tags={project.frontmatter.tags}
+						link={{to: project.frontmatter.url, text: `Visit Site`}}
+						align={id % 2 === 0 ? `right` : `left`}
+					/>
+				))}
+			</React.Fragment>
 		</Layout>
 	);
 };
