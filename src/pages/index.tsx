@@ -32,6 +32,10 @@ const IndexPage = ({data}: IProps) => {
 				))}
 			</Row>
 			<React.Fragment>
+				<SectionTitle
+					title='Recent Projects'
+					link={{href: '/projects', text: 'View All'}}
+				/>
 				{data.projects.nodes.map((project, key) => (
 					<Showcase
 						key={key}
@@ -39,7 +43,7 @@ const IndexPage = ({data}: IProps) => {
 						content={project.html}
 						link={{to: project.frontmatter.url, text: `Visit Site`}}
 						image={project.frontmatter.featured_image.childImageSharp.fluid}
-						align={key % 2 === 0 ? `left` : `right`}
+						align={key % 2 === 0 ? `right` : `left`}
 						date={project.fields.date}
 						tags={project.frontmatter.tags}
 					/>
@@ -147,7 +151,7 @@ export interface IProps {
 					url: string;
 				}
 				fields: {
-					date: string;
+					date: Date;
 				}
 				html: string;
 			}]

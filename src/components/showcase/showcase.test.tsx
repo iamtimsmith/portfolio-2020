@@ -42,6 +42,12 @@ describe(`<Showcase />`, () => {
 		expect(title).toBeInTheDocument();
 	});
 
+	it(`renders the date as a year`, () => {
+		const {queryByTestId} = render(<Showcase {...props}/>);
+		const date = queryByTestId(`date`);
+		expect(date).toHaveTextContent(`2020`);
+	});
+
 	it(`renders the title as an h3`, () => {
 		props.title.type = `h3`;
 		const {queryByRole} = render(<Showcase {...props}/>);

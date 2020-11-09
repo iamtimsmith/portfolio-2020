@@ -53,7 +53,7 @@ export const Content = styled.article<IShowcase>`
 	small {
 		margin: 0;
 		font-weight: bold;
-		color: var(--mid);
+		color: var(--grey-200);
 	}
 	h2, h3 {
 		margin: 0;

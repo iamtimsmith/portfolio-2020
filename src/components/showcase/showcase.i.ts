@@ -13,7 +13,7 @@ export interface IProps {
 		title?: boolean;
 	};
 	align: string;
-	date: string;
+	date?: Date;
 	tags: string;
 	button?: boolean;
 }

@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import dayjs from 'dayjs';
 import {Link} from 'components';
 import {Section, Image, Content, Markdown, Button, Tags} from './showcase.style';
 import {IProps} from './showcase.i';
@@ -27,7 +28,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 				<Img fluid={image} alt={title.text} />
 			</Image>
 			<Content align={align} show={show}>
-				<small>{date}</small>
+				<small data-testid='date'>{dayjs(date).format(`YYYY`)}</small>
 				{link.title && title.type === `h2` &&
 					<h2>
 						<Link to={link.to}>{title.text}</Link>
