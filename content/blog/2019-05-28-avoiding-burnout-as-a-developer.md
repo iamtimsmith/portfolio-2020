@@ -1,7 +1,7 @@
 ---
 title: 'Avoiding Burn Out as a Web Developer'
 tags: '#misc'
-featured_image: ../images/2019/avoiding-burnout-as-a-developer.jpg
+featured_image: ../images/2019/avoiding-burnout-as-a-web-developer.png
 keywords: 'burn out, burnout, web developer'
 description: "As a web developer, burn out is a very real concern. It's something that isn't talked about much, so today I'll talk about my experience and how to avoid it."
 published: true
