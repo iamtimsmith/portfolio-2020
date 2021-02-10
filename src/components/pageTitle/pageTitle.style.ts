@@ -3,6 +3,7 @@ import {media} from 'styles';
 
 export const Title = styled.header`
 	position: relative;
+	margin-bottom: -5px;
 
 	h1 {
 		font-size: 5rem;

@@ -27,6 +27,12 @@ export const Image = styled.figure<IShowcase>`
 		min-height:100%;
 		order: ${props => props.align === 'left' ? 2 : 1};
 	}
+
+	${(props) => props.link ? `
+		&:hover + article > h2 > a {
+			background-position: 0px 100%;
+		}
+	` : ``}
 `;
 
 export const Content = styled.article<IShowcase>`

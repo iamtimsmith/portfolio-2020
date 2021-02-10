@@ -24,7 +24,7 @@ const props = {
 		title: true,
 	},
 	align: `left`,
-	date: `11-09-2020`,
+	date: {date: `11-09-2020`},
 	tags: `#react #node`,
 	button: false,
 }

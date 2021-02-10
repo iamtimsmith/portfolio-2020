@@ -4,8 +4,8 @@ import {Footer} from './footer';
 
 describe(`<Footer />`, () => {
 	it(`renders`, () => {
-		const {queryByRole} = render(<Footer />);
-		expect(queryByRole(`contentinfo`)).toBeInTheDocument();
+		const {queryByTestId} = render(<Footer />);
+		expect(queryByTestId(`footer`)).toBeInTheDocument();
 	});
 
 	it(`renders the text`, () => {

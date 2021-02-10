@@ -13,7 +13,7 @@ const sites = [
 
 export const Social = () => {
 	return (
-		<Aside>
+		<Aside data-testid='social'>
 			<Nav aria-label='social nav'>
 				<BackToTop />
 				{sites.map((site, key) => (

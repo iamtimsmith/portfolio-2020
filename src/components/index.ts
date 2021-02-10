@@ -9,3 +9,4 @@ export {Summary, Row} from 'components/summary/summary';
 export {Link} from 'components/link/link';
 export {Showcase} from 'components/showcase/showcase';
 export {PageTitle} from 'components/pageTitle/pageTitle';
+export {FeaturedImage} from 'components/featuredImage/featuredImage';

@@ -2,6 +2,14 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import {FluidObject} from 'gatsby-image';
 import {Layout, Hero, SectionTitle, Summary, Row, Showcase} from 'components';
+import {
+	RecentPostsFragment,
+	IRecentPostsProps,
+	RecentProjectsFragment,
+	IRecentProjectsProps,
+	HeroImageFragment,
+	IHeroImageProps
+} from 'queries';
 
 const IndexPage = ({data}: IProps) => {
 	console.log(data);
@@ -58,103 +66,29 @@ export default IndexPage;
 export const query = graphql`
 	query {
 		heroImage: file(name: {eq:"timsmith-teal"}) {
-			childImageSharp {
-				fluid(maxWidth: 600) {
-					...GatsbyImageSharpFluid_withWebp_noBase64
-				}
-			}
+			...HeroImageFragment
 		}
 		recentPosts: allMarkdownRemark(
 			filter:{fileAbsolutePath:{regex:"/blog/ig"}}
 			sort:{fields:fields___date, order:DESC}
 			limit:3
 		) {
-			nodes {
-				frontmatter {
-					title
-					featured_image {
-						childImageSharp {
-							fluid(maxWidth: 400) {
-								...GatsbyImageSharpFluid_withWebp_noBase64
-							}
-						}
-					}
-					tags
-				}
-				fields {
-					slug
-				}
-				excerpt(truncate:true)
-			}
+			...RecentPostsFragment
 		}
 		projects: allMarkdownRemark(
 			filter:{fileAbsolutePath:{regex:"/projects/ig"}}
 			sort:{fields:fields___date, order:DESC}
 			limit:3
 		) {
-			nodes {
-				frontmatter {
-					title
-					featured_image {
-						childImageSharp {
-							fluid(maxWidth: 400) {
-								...GatsbyImageSharpFluid_withWebp_noBase64
-							}
-						}
-					}
-					tags
-					url
-				}
-				fields {
-					date(formatString: "YYYY")
-				}
-				html
-			}
+			...RecentProjectsFragment
 		}
 	}
 `;
 
 export interface IProps {
 	data: {
-		heroImage: {
-			childImageSharp: {
-				fluid: FluidObject;
-			}
-		};
-		recentPosts: {
-			nodes: [{
-				frontmatter: {
-					title: string;
-					featured_image: {
-						childImageSharp: {
-							fluid: FluidObject;
-						}
-					};
-					tags: string;
-				}
-				fields: {
-					slug: string;
-				}
-				excerpt: string;
-			}]
-		}
-		projects: {
-			nodes: [{
-				frontmatter: {
-					title: string;
-					featured_image: {
-						childImageSharp: {
-							fluid: FluidObject;
-						}
-					};
-					tags: string;
-					url: string;
-				}
-				fields: {
-					date: Date;
-				}
-				html: string;
-			}]
-		}
+		heroImage: IHeroImageProps;
+		recentPosts:IRecentPostsProps;
+		projects: IRecentProjectsProps;
 	};
 }

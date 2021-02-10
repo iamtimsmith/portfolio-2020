@@ -4,7 +4,7 @@ import {Section, Meta} from './footer.style';
 
 export const Footer = () => {
 	return (
-		<Section>
+		<Section data-testid='footer'>
 			<Meta>Made with <Heart /> by Tim Smith</Meta>
 		</Section>
 	);

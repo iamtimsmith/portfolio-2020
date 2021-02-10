@@ -19,8 +19,8 @@ describe(`<Layout />`, () => {
 	});
 
 	it(`renders the social buttons`, () => {
-		const {queryByRole} = render(<Layout><h1>Hello World</h1></Layout>);
-		expect(queryByRole(`navigation`, {name: `social nav`})).toBeInTheDocument();
+		const {queryByTestId} = render(<Layout><h1>Hello World</h1></Layout>);
+		expect(queryByTestId(`social`)).toBeInTheDocument();
 	});
 
 	it(`renders the footer`, () => {

@@ -7,14 +7,15 @@ export interface IProps {
 		type: string;
 	};
 	content: string;
-	link: {
+	link?: {
 		to: string;
 		text: string;
 		title?: boolean;
+		image?: boolean;
 	};
 	align: string;
 	date?: {
-		date: Date;
+		date: Date | string;
 		year?: boolean;
 	}
 	tags: string;
@@ -24,5 +25,6 @@ export interface IProps {
 export interface IShowcase {
 	align: string;
 	opacity?: number;
-	show?: Boolean;
+	show?: boolean;
+	link?: boolean;
 }

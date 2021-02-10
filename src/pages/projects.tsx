@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import {FluidObject} from 'gatsby-image';
 import {Layout, Showcase, PageTitle} from 'components';
+import {ProjectsPageFragment, IProjectsPageProps} from 'queries';
 
-const ProjectsPage = ({data}: IProps) => {
+const ProjectsPage = ({data}: IProjectsPageProps) => {
 	return (
 		<Layout>
 			<PageTitle title='Projects' />
@@ -36,53 +36,9 @@ export const query = graphql`
 			filter: {fileAbsolutePath: {regex: "/projects/ig"}}
 			sort:{fields:fields___date, order:DESC}
 		) {
-			nodes {
-				fileAbsolutePath
-				timeToRead
-				frontmatter {
-					title
-					url
-					tags
-					featured_image {
-						childImageSharp {
-							fluid {
-								...GatsbyImageSharpFluid_withWebp_noBase64
-							}
-						}
-					}
-				}
-				fields {
-					date
-				}
-				html
-			}
+			...ProjectsPageFragment
 		}
 	}
 `;
-
-export interface IProps {
-	data: {
-		projects: {
-			nodes: [{
-				fileAbsolutePath: string;
-				timeToRead: number;
-				frontmatter: {
-					title: string;
-					url: string;
-					tags: string;
-					featured_image: {
-						childImageSharp: {
-							fluid: FluidObject;
-						}
-					}
-				}
-				fields: {
-					date: Date;
-				}
-				html: string;
-			}]
-		}
-	}
-}
 
 export default ProjectsPage;

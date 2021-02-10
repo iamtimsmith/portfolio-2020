@@ -1,5 +1,4 @@
 const path = require(`path`);
-const {createFilePath} = require('gatsby-source-filesystem');
 
 const getSlug = filepath => {
 	return filepath.split(`-`).splice(3).join(`-`).replace(/\.mdx?/ig, ``);
@@ -17,10 +16,13 @@ exports.createPages = ({graphql, actions}) => {
 	return graphql(`
 		query {
 			allMarkdownRemark(
-				filter:{fileAbsolutePath:{regex:"/blog/ig"}}
+				filter:{fileAbsolutePath:{regex:"/blog/i"}}
 			) {
 				nodes {
 					fileAbsolutePath
+					fields {
+						slug
+					}
 				}
 			}
 		}
@@ -30,6 +32,7 @@ exports.createPages = ({graphql, actions}) => {
 			createPage({
 				path: `/blog/${getSlug(node.fileAbsolutePath)}`,
 				component: path.resolve(`src/templates/post.tsx`),
+				context: {slug: node.fields.slug}
 			});
 		});
 	});

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import {FluidObject} from 'gatsby-image';
 import {Layout, PageTitle, Showcase, Row, Summary} from 'components';
+import {BlogPageFragment, IBlogPageProps} from 'queries';
 
-const BlogPage = ({data}: IProps) => {
+const BlogPage = ({data}: IBlogPageProps) => {
 	return (
 		<Layout>
 			<PageTitle title='Blog' />
@@ -14,8 +14,8 @@ const BlogPage = ({data}: IProps) => {
 				image={data.blog.nodes[0].frontmatter.featured_image.childImageSharp.fluid}
 				date={{date: data.blog.nodes[0].fields.date, year: false}}
 				tags={data.blog.nodes[0].frontmatter.tags}
-				link={{to: data.blog.nodes[0].fields.slug, text: `Read More`, title: true}}
-				align='left'
+				link={{to: data.blog.nodes[0].fields.slug, text: `Read More`, title: true, image: true}}
+				align='right'
 			/>
 			<Row>
 				{data.blog.nodes.map((post, id) => {
@@ -47,50 +47,8 @@ query Blog {
     filter:{fileAbsolutePath: {regex:"/blog/i"}}
     sort:{fields:fields___date, order: DESC}
   ) {
-    nodes {
-      frontmatter {
-        title
-        description
-        tags
-        featured_image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-			}
-			fields {
-				date
-				slug
-			}
-      excerpt
-    }
+    ...BlogPageFragment
   }
 }`;
-
-export interface IProps {
-	data: {
-		blog: {
-			nodes: [{
-				frontmatter: {
-					title: string;
-					descriptions: string;
-					tags: string;
-					featured_image: {
-						childImageSharp: {
-							fluid: FluidObject;
-						}
-					}
-				}
-				fields: {
-					date: Date;
-					slug: string;
-				}
-				excerpt: string;
-			}]
-		}
-	}
-}
 
 export default BlogPage;

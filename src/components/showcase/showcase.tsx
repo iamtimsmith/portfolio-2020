@@ -24,37 +24,42 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 
 	return (
 		<Section ref={section} data-testid='showcase'>
-			<Image align={align}>
-				<Img fluid={image} alt={title.text} />
+			<Image align={align} link={link ? link.image : false}>
+				{link && link.image &&
+					<Link to={link.to}>
+						<Img fluid={image} alt={title.text} />
+					</Link>
+				}
+				{(!link || !link.image) && <Img fluid={image} alt={title.text} />}
 			</Image>
 			<Content align={align} show={show}>
 				{date && <small data-testid='date'>{dayjs(date.date).format(date.year ? `YYYY` : `MM-DD-YYYY`)}</small>}
-				{link.title && title.type === `h2` &&
+				{(link && link.title) && title.type === `h2` &&
 					<h2>
 						<Link to={link.to}>{title.text}</Link>
 					</h2>
 				}
-				{link.title && title.type === `h3` &&
+				{(link && link.title && title.type === `h3`) &&
 					<h3>
 						<Link to={link.to}>{title.text}</Link>
 					</h3>
 				}
-				{!link.title && title.type === `h2` &&
+				{(!link || !link.title && title.type === `h2`) &&
 					<h2>{title.text}</h2>
 				}
-				{!link.title && title.type === `h3` &&
+				{(!link || !link.title && title.type === `h3`) &&
 					<h3>{title.text}</h3>
 				}
 				<Tags>{tags}</Tags>
 				{content &&
 					<Markdown dangerouslySetInnerHTML={{__html: content}} />
 				}
-				{!link.title && button &&
+				{!link || !link.title && button &&
 					<Link to={link.to}>
 						<Button>{link.text}</Button>
 					</Link>
 				}
-				{!link.title && !button &&
+				{!link || !link.title && !button &&
 					<Link to={link.to}>{link.text}</Link>
 				}
 			</Content>
