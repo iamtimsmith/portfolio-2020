@@ -16,12 +16,15 @@ exports.createPages = ({graphql, actions}) => {
 	return graphql(`
 		query {
 			allMarkdownRemark(
-				filter:{fileAbsolutePath:{regex:"/blog/i"}}
+				filter:{fileAbsolutePath:{regex:"/blog/i"}, frontmatter:{published:{eq:true}}
 			) {
 				nodes {
 					fileAbsolutePath
 					fields {
 						slug
+					}
+					frontmatter {
+						published
 					}
 				}
 			}

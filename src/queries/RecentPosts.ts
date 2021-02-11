@@ -18,7 +18,7 @@ export const RecentPostsFragment = graphql`
 			fields {
 				slug
 			}
-			excerpt(truncate:true)
+			excerpt
 		}
 	}
 `;

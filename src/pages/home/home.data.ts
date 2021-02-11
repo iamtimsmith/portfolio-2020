@@ -1,7 +1,26 @@
 import {graphql} from 'gatsby';
-import {FluidObject} from 'gatsby-image';
 
-export const RecentProjectsFragment = graphql`
+export default graphql`
+	fragment RecentPostsFragment on MarkdownRemarkConnection {
+		nodes {
+			frontmatter {
+				title
+				featured_image {
+					childImageSharp {
+						fluid(maxWidth: 400) {
+							...GatsbyImageSharpFluid_withWebp_noBase64
+						}
+					}
+				}
+				tags
+			}
+			fields {
+				slug
+			}
+			excerpt
+		}
+	}
+
 	fragment RecentProjectsFragment on MarkdownRemarkConnection {
 		nodes {
 			frontmatter {
@@ -22,4 +41,4 @@ export const RecentProjectsFragment = graphql`
 			html
 		}
 	}
-`;
+`

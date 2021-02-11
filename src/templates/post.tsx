@@ -13,7 +13,7 @@ const PostTemplate = ({data}: IProps) => {
 			<h1>{frontmatter.title}</h1>
 			<div dangerouslySetInnerHTML={{__html: html}} />
 			<SectionTitle title='Recent Blog Posts' />
-			<Row>
+			{/* <Row>
 				{data.recent.nodes.map((post, key) => (
 					<Summary
 						key={key}
@@ -27,7 +27,7 @@ const PostTemplate = ({data}: IProps) => {
 						}}
 					/>
 				))}
-			</Row>
+			</Row> */}
 		</Layout>
 	);
 };
@@ -42,13 +42,6 @@ export const query = graphql`
 	query PostQuery($slug: String!) {
 		post: markdownRemark(fields:{slug:{eq: $slug}}) {
 			...BlogPostFragment
-		}
-		recent: allMarkdownRemark(
-			filter:{fileAbsolutePath:{regex:"/blog/ig"}, fields: {slug:{ne:$slug}}}
-			sort:{fields:fields___date, order:DESC}
-			limit:3
-		) {
-			...RecentPostsFragment
 		}
 	}
 `;

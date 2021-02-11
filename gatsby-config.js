@@ -38,9 +38,24 @@ module.exports = {
 				gfm: true,
 				plugins: [
 					{
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'pre-title',
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              // If setting this to true, the parser won't handle and highlight inline
+              // code used in markdown i.e. single backtick code like `this`.
+							noInlineHighlight: true,
+							classPrefix: `language-`,
+            },
+          },
+					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 1600,
+							maxWidth: 1400,
 							linkImagesToOriginal: false,
 							showCaptions: true,
 							withWebp: true,
