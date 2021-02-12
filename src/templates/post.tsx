@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import {Layout, FeaturedImage, SectionTitle, Row, Summary} from 'components';
-import {BlogPostFragment, IBlogPostProps, RecentPostsFragment, IRecentPostsProps} from 'queries';
+import {Layout, FeaturedImage, SectionTitle, Row, Summary, Content} from 'components';
+import {IPost, IPostTemplate} from 'types';
 
-const PostTemplate = ({data}: IProps) => {
-	const {frontmatter, html, excerpt, fields} = data.post;
+const PostTemplate = ({data}: IPostTemplate) => {
+	const {frontmatter, html} = data.post;
 
 	return (
 		<Layout>
 			<FeaturedImage fluid={frontmatter.featured_image.childImageSharp.fluid} alt={frontmatter.title} />
 			<h1>{frontmatter.title}</h1>
-			<div dangerouslySetInnerHTML={{__html: html}} />
+			<Content html={html} />
 			<SectionTitle title='Recent Blog Posts' />
-			{/* <Row>
-				{data.recent.nodes.map((post, key) => (
+			<Row>
+				{data.recent.nodes.map((post: IPost, key: number) => (
 					<Summary
 						key={key}
 						title={post.frontmatter.title}
@@ -27,7 +27,7 @@ const PostTemplate = ({data}: IProps) => {
 						}}
 					/>
 				))}
-			</Row> */}
+			</Row>
 		</Layout>
 	);
 };
@@ -41,14 +41,47 @@ export default PostTemplate;
 export const query = graphql`
 	query PostQuery($slug: String!) {
 		post: markdownRemark(fields:{slug:{eq: $slug}}) {
-			...BlogPostFragment
+			frontmatter {
+				title
+				description
+				tags
+				featured_image {
+					childImageSharp {
+						fluid {
+							...GatsbyImageSharpFluid_withWebp_noBase64
+						}
+					}
+				}
+			}
+			fields {
+				date
+				slug
+			}
+			excerpt
+			html
+		}
+		recent: allMarkdownRemark(
+			filter:{fileAbsolutePath: {regex:"/blog/i"} fields: {slug: {ne: $slug}}}
+			sort:{fields:fields___date, order: DESC}
+			limit: 3
+		) {
+			nodes {
+				excerpt
+				frontmatter {
+					title
+					tags
+					featured_image {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid_withWebp_noBase64
+							}
+						}
+					}
+				}
+				fields {
+					slug
+				}
+			}
 		}
 	}
 `;
-
-export interface IProps {
-	data: {
-		post: IBlogPostProps;
-		recent: IRecentPostsProps;
-	}
-}

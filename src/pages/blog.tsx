@@ -1,26 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {graphql} from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 import {Layout, PageTitle, Showcase, Row, Summary} from 'components';
-import {BlogPageFragment, IBlogPageProps} from 'queries';
+import {IPost} from 'types';
+import {useBlogQuery} from 'hooks';
 
-const BlogPage = ({data}: IBlogPageProps) => {
+const BlogPage = () => {
+	const {blog} = useBlogQuery();
 	return (
 		<Layout>
 			<PageTitle title='Blog' />
 			<Showcase
-				title={{text: data.blog.nodes[0].frontmatter.title, type: `h2`}}
-				content={data.blog.nodes[0].excerpt}
-				image={data.blog.nodes[0].frontmatter.featured_image.childImageSharp.fluid}
-				date={{date: data.blog.nodes[0].fields.date, year: false}}
-				tags={data.blog.nodes[0].frontmatter.tags}
-				link={{to: data.blog.nodes[0].fields.slug, text: `Read More`, title: true, image: true}}
+				title={{text: blog.nodes[0].frontmatter.title, type: `h2`}}
+				content={blog.nodes[0].excerpt}
+				image={blog.nodes[0].frontmatter.featured_image.childImageSharp.fluid}
+				date={{date: blog.nodes[0].fields.date, year: false}}
+				tags={blog.nodes[0].frontmatter.tags}
+				link={{to: blog.nodes[0].fields.slug, text: `Read More`, title: true, image: true}}
 				align='right'
 			/>
 			<Row>
-				{data.blog.nodes.map((post, id) => {
+				{blog.nodes.map((post: IBlogPost, id: number) => {
 					if (id > 0) return (
 						<Summary
+							key={id}
 							title={post.frontmatter.title}
 							content={post.excerpt}
 							image={post.frontmatter.featured_image.childImageSharp.fluid}
@@ -40,15 +43,5 @@ const BlogPage = ({data}: IBlogPageProps) => {
 BlogPage.propTypes = {
 	data: PropTypes.object,
 };
-
-export const query = graphql`
-query Blog {
-	blog: allMarkdownRemark(
-    filter:{fileAbsolutePath: {regex:"/blog/i"}}
-    sort:{fields:fields___date, order: DESC}
-  ) {
-    ...BlogPageFragment
-  }
-}`;
 
 export default BlogPage;

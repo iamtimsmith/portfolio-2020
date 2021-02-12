@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {graphql} from 'gatsby';
 import {Layout, Showcase, PageTitle} from 'components';
-import {ProjectsPageFragment, IProjectsPageProps} from 'queries';
+import {IProject} from 'types';
+import {useProjectsQuery} from 'hooks';
 
-const ProjectsPage = ({data}: IProjectsPageProps) => {
+const ProjectsPage = () => {
+	const {projects} = useProjectsQuery();
+
 	return (
 		<Layout>
 			<PageTitle title='Projects' />
 			<React.Fragment>
-				{data.projects.nodes.map((project, id: number) => (
+				{projects.nodes.map((project: IProject, id: number) => (
 					<Showcase
 						key={id}
 						title={{text: project.frontmatter.title, type: `h2`}}
@@ -29,16 +31,5 @@ const ProjectsPage = ({data}: IProjectsPageProps) => {
 ProjectsPage.propTypes = {
 	data: PropTypes.object,
 };
-
-export const query = graphql`
-	query Projects {
-		projects: allMarkdownRemark(
-			filter: {fileAbsolutePath: {regex: "/projects/ig"}}
-			sort:{fields:fields___date, order:DESC}
-		) {
-			...ProjectsPageFragment
-		}
-	}
-`;
 
 export default ProjectsPage;
