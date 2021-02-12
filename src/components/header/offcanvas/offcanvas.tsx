@@ -13,19 +13,19 @@ const sites = [
 ];
 
 export const Offcanvas = () => {
-	const {store, setStore} = useContext(Store);
+	const {offcanvas, setOffcanvas} = useContext(Store);
 
-	const handleToggle = (show: boolean = !store.offcanvas) => {
-		setStore({offcanvas: show});
+	const handleToggle = (show: boolean = false) => {
+		setOffcanvas(!show);
 	}
 
 	return (
 		<React.Fragment>
-			<Toggle onClick={() => handleToggle()} show={store.offcanvas}>
+			<Toggle onClick={() => handleToggle()} show={offcanvas}>
 				<span />
 				<span />
 			</Toggle>
-			<Aside show={store.offcanvas}>
+			<Aside show={offcanvas}>
 				<Nav data-testid='mobile'>
 					<Link
 						to='/'

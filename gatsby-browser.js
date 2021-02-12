@@ -6,5 +6,5 @@
 
 // You can delete this file if you're not using it
 exports.onInitialClientRender = () => {
-  require(`./content/themes/dracula.css`);
+  require(`./content/themes/prism.css`);
 }

@@ -7,6 +7,7 @@ export const Section = styled.section`
 	align-items: center;
 	position: relative;
 	padding: 0 0 50px;
+	min-height: 750px;
 
 	${media.desktop} {
 		padding: 50px 0;

@@ -19,7 +19,7 @@ export const Section = styled.section`
 
 export const Image = styled.figure<IShowcase>`
 	position: relative;
-	flex: 3;
+	flex: 2;
 	order: 1;
 	margin: 0;
 
