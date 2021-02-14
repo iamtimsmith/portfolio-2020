@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 // import {link} from 'components/link/link.style';
-import {reset} from 'styles';
+import {reset, button} from 'styles';
 
 export const GlobalStyles = createGlobalStyle`
 	${reset}
@@ -94,6 +94,26 @@ export const GlobalStyles = createGlobalStyle`
 
 		&:hover {
 			background-position: 0px 100%;
+		}
+	}
+	button, input[type='submit'] {
+		padding: 15px 25px;
+		font-size: 2.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		border-radius: 0;
+		border: 2px solid var(--grey-900);
+		background: transparent;
+		transition: all 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background: var(--grey-900);
+			color: var(--grey-0);
+		}
+		&:focus, &:active {
+			border: 2px solid var(--grey-900);
+			outline: none;
 		}
 	}
 

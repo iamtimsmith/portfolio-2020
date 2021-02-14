@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {encode} from 'utils';
-import {Field, Button, Alert} from './contactForm.style';
+import {Field, Alert} from './contactForm.style';
 
 export const ContactForm = () => {
 	const [status, setStatus] = useState('');
@@ -46,7 +46,7 @@ export const ContactForm = () => {
 				<label htmlFor='message'>Message</label>
 				<textarea name="message" id="message" onChange={e => setMessage(e.target.value)} value={message} />
 			</Field>
-			<Button>Submit</Button>
+			<button>Submit</button>
 		</form>
 	);
 }
