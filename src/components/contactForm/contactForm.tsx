@@ -9,11 +9,11 @@ export const ContactForm = () => {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
-	const handleForm = async (e: any) => {
+	const handleForm = (e: any) => {
 		e.preventDefault();
 		// If form is filled out
 		if (name.length > 1 && email.length > 7 && message.length > 10) {
-			await fetch('/', {
+			fetch('/', {
 				method: 'post',
 				headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 				body: encode({'form-name': 'contact', name, email, message})
@@ -31,8 +31,8 @@ export const ContactForm = () => {
 	}
 
 	return (
-		<form onSubmit={e => handleForm(e)} name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
-			{(status && alert) && <Alert status={status}>{alert}</Alert>}
+		<form onSubmit={e => handleForm(e)} name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field' role='form'>
+			{(status && alert) && <Alert role='alert' status={status}>{alert}</Alert>}
 			<input type="hidden" name="form-name" value="contact" />
 			<Field>
 				<label htmlFor='name'>Name</label>

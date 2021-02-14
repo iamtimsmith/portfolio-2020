@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import {IAlert} from './contactForm.i';
 
-export const Alert = styled.p<IAlert>`
+export const Alert = styled.section<IAlert>`
 	color: ${(props) =>
 		props.status === 'success' ? `var(--teal-500)` :
 		props.status === 'error' ? 'red' :
-		'black'}
+		'black'};
 `;
 
 export const Field = styled.div`
@@ -49,5 +49,9 @@ export const Button = styled.button`
 	&:hover {
 		background: var(--grey-900);
 		color: var(--grey-0);
+	}
+	&:focus, &:active {
+		border: 2px solid var(--grey-900);
+		outline: none;
 	}
 `;

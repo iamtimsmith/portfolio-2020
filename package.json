@@ -57,6 +57,7 @@
     "eslint-plugin-react": "^7.21.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.5.3",
+    "jest-fetch-mock": "^3.0.3",
     "jest-preset-gatsby": "^1.0.89",
     "prettier": "^2.1.2",
     "react-test-renderer": "^16.14.0",

@@ -7,8 +7,8 @@ global.scrollTo = scrollto;
 
 describe(`<BackToTop />`, () => {
 	it(`scrolls when clicked`, () => {
-		const {getByRole} = render(<BackToTop />);
-		const button = getByRole(`button`, {name: /back to top/i});
+		const {getByLabelText} = render(<BackToTop />);
+		const button = getByLabelText(/back to top/i);
 		fireEvent.click(button);
 		expect(window.scrollTo).toHaveBeenCalled();
 	});
