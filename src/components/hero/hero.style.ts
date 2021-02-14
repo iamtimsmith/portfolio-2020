@@ -45,7 +45,7 @@ export const Section = styled.section`
 	p {
 		font-size: 2.4rem;
 		line-height: 1.8;
-		margin: 0 30px 0 0;
+		margin: 30px 30px 30px 0;
 	}
 
 	svg {

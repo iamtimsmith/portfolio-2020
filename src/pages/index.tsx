@@ -1,5 +1,5 @@
 import React from 'react';
-import {Layout, Hero, SectionTitle, Summary, Row, Showcase} from 'components';
+import {Layout, Hero, SectionTitle, Summary, Row, Showcase, ContactForm} from 'components';
 import {IPost, IProject} from 'types';
 import {useHomeQuery} from 'hooks';
 
@@ -49,6 +49,10 @@ const HomePage = () => {
 						tags={project.frontmatter.tags}
 					/>
 				))}
+			</React.Fragment>
+			<React.Fragment>
+				<SectionTitle title='Get In Touch' />
+				<ContactForm />
 			</React.Fragment>
 		</Layout>
 	);

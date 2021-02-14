@@ -56,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
 		height: 100%;
 		font-size: 2.2rem;
 		font-family: var(--sans-serif);
-		font-weight: 300;
+		font-weight: 100;
 		line-height: 1.6;
 		color: var(--grey-700);
 		background: var(--grey-0);
