@@ -13,7 +13,7 @@ export const Aside = styled.aside`
 		justify-content: center;
 		align-items: center;
 		position: fixed;
-		right: 0;
+		right: 20px;
 		bottom: 0;
 		background: var(--grey-0);
 	}

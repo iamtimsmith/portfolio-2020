@@ -31,8 +31,8 @@ export const GlobalStyles = createGlobalStyle`
 		// Typography
 		--sans-serif: sans-serif;
 		--h1: 3.6rem;
-		--h2: 3.2rem;
-		--h3: 2.8rem;
+		--h2: 3rem;
+		--h3: 2.4rem;
 		--h4: 2rem;
 	}
 

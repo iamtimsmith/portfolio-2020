@@ -24,7 +24,7 @@ const HomePage = () => {
 						title={post.frontmatter.title}
 						content={post.excerpt}
 						image={post.frontmatter.featured_image.childImageSharp.fluid}
-						tags={post.frontmatter.tags.split(`, `)}
+						tags={post.frontmatter.tags.split(/\,? /ig)}
 						link={{
 							href: post.fields.slug,
 							text: post.frontmatter.title

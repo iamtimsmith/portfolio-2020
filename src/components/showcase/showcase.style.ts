@@ -13,14 +13,14 @@ export const Section = styled.section`
 
 	${media.widescreen} {
 		flex-direction: row;
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 `;
 
 export const Image = styled.figure<IShowcase>`
 	position: relative;
 	flex: 2;
-	order: 1;
+	order: 2;
 	margin: 0;
 
 	${media.desktop} {
@@ -39,7 +39,7 @@ export const Content = styled.article<IShowcase>`
 	position: relative;
 	text-align: left;
 	flex: 2;
-	order: 2;
+	order: 1;
 	padding: 15px;
 	position: relative;
 	${props => props.align}: -30px;
@@ -76,4 +76,15 @@ export const Markdown = styled.div`
 export const Tags = styled.p`
 	color: var(--grey-300);
 	margin: 0;
+`;
+
+export const Tag = styled.span`
+	font-size: 2rem;
+	margin: 0 5px;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
 `;

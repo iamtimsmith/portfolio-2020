@@ -3,9 +3,9 @@ import {media} from 'styles';
 
 export const Header = styled.header`
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	padding: 50px 0 0;
 	margin-bottom: 10px;
 
@@ -16,11 +16,11 @@ export const Header = styled.header`
 	${media.tablet} {
 		flex-direction: row;
 		align-items: center;
-		margin-bottom: 0;
+		margin-bottom: 5px;
 	}
 
 	h2, h3 {
-		margin: 0;
+		margin: 0 30px 0 0;
 		${media.tablet} {
 			margin-right: 50px;
 		}

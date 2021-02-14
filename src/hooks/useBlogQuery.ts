@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 export const useBlogQuery = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			blog: allMarkdownRemark(filter:{fileAbsolutePath: {regex:"/blog/i"}} sort:{fields:fields___date, order: DESC}) {
+			blog: allMarkdownRemark(filter:{fileAbsolutePath: {regex:"/blog/i"}, frontmatter:{published:{eq:true}}} sort:{fields:fields___date, order: DESC}) {
 				nodes {
 					frontmatter {
 						title

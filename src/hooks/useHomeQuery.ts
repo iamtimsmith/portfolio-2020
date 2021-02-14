@@ -11,7 +11,7 @@ export const useHomeQuery = () => {
 				}
 			}
 
-			recentPosts: allMarkdownRemark(filter:{fileAbsolutePath:{regex:"/blog/ig"} frontmatter:{published:{eq:true}}} sort:{fields:fields___date, order:DESC} limit:3) {
+			recentPosts: allMarkdownRemark(filter:{fileAbsolutePath: {regex:"/blog/i"}, frontmatter:{published:{eq:true}}} sort:{fields:fields___date, order: DESC} limit: 3) {
 				nodes {
 					frontmatter {
 						title
@@ -37,7 +37,7 @@ export const useHomeQuery = () => {
 						title
 						featured_image {
 							childImageSharp {
-								fluid(maxWidth: 400) {
+								fluid(maxWidth: 1024) {
 									...GatsbyImageSharpFluid_withWebp_noBase64
 								}
 							}

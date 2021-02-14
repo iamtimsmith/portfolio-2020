@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import dayjs from 'dayjs';
 import {Link} from 'components';
-import {Section, Image, Content, Markdown, Button, Tags} from './showcase.style';
+import {Section, Image, Content, Markdown, Button, Tags, Tag} from './showcase.style';
 import {IProps} from './showcase.i';
 
 export const Showcase = ({image, title, content, link, align='right', date, tags, button=false}: IProps) => {
@@ -50,7 +50,9 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 				{(!link || !link.title && title.type === `h3`) &&
 					<h3>{title.text}</h3>
 				}
-				<Tags>{tags}</Tags>
+				<Tags>
+					{tags.split(/\,? /ig).map(tag => <Tag>{tag}</Tag>)}
+				</Tags>
 				{content &&
 					<Markdown dangerouslySetInnerHTML={{__html: content}} />
 				}
