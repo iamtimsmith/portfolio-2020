@@ -6,6 +6,7 @@ import {Article, Content, SummaryDate, Tags} from './summary.style';
 import {IProps} from './summary.i';
 
 export const Summary = ({title, content, date, tags, image, link, as=`h2`}: IProps) => {
+	console.log(tags);
 	return (
 		<Article>
 			<Link to={link.href}>
