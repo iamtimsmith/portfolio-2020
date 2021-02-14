@@ -13,7 +13,7 @@ export const ContactForm = () => {
 		e.preventDefault();
 		// If form is filled out
 		if (name.length > 1 && email.length > 7 && message.length > 10) {
-			await fetch(location.pathname, {method: 'post', body: encode({'form-name': 'contact', name, email, message})});
+			await fetch('/', {method: 'post', body: encode({'form-name': 'contact', name, email, message})});
 			setStatus('success');
 			setAlert(`Thanks for reaching out! I'll be in contact as soon as possible.`);
 			setName('');
