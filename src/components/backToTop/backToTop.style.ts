@@ -14,6 +14,9 @@ export const BackToTopStyle = styled.button<IBackToTop>`
 	&:hover {
 		color: var(--grey-900);
 	}
+	&:active, &:focus {
+		outline: 2px solid var(--teal-100);
+	}
 
 	${media.desktop} {
 		display: flex;

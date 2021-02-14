@@ -1,5 +1,6 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react';
+
 import {ContactForm} from './contactForm';
 
 describe(`<ContactForm/>`, () => {
@@ -54,7 +55,7 @@ describe(`<ContactForm/>`, () => {
 	});
 
 	it(`throws a success message when properly filled out`, () => {
-		const {getByText, getByRole, queryByText, debug} = render(<ContactForm/>);
+		const {getByText, getByRole, queryByText} = render(<ContactForm/>);
 		const name = getByRole(`textbox`, {name: /name/i});
 		fireEvent.change(name, {target: {value: 'John Doe'}});
 		const email = getByRole(`textbox`, {name: /email/i});
@@ -63,7 +64,6 @@ describe(`<ContactForm/>`, () => {
 		fireEvent.change(message, {target: {value: 'fake message'}});
 		const button = getByText(/submit/i);
 		fireEvent.click(button);
-		debug();
 		const alert = queryByText(/thanks/ig);
 		expect(alert).toBeInTheDocument();
 	});
