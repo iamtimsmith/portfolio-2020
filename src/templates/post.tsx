@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import {Layout, FeaturedImage, SectionTitle, Row, Summary, Content} from 'components';
+import styled from 'styled-components';
+import dayjs from 'dayjs';
+import {Layout, FeaturedImage, SectionTitle, Row, Summary, Content, Share} from 'components';
 import {IPost, IPostTemplate} from 'types';
 
 const PostTemplate = ({data}: IPostTemplate) => {
-	const {frontmatter, html} = data.post;
+	const {frontmatter, fields, html} = data.post;
 
 	return (
 		<Layout>
 			<FeaturedImage fluid={frontmatter.featured_image.childImageSharp.fluid} alt={frontmatter.title} />
-			<h1>{frontmatter.title}</h1>
+			<PostTitle>{frontmatter.title}</PostTitle>
+			<PostDate>{dayjs(fields.date).format(`MMMM D, YYYY`)}</PostDate>
+			<Share
+				url={`https://www.iamtimsmith.com/${fields.slug}`}
+				title={frontmatter.title}
+				image={frontmatter.featured_image.childImageSharp.fluid.src} />
 			<Content html={html} />
 			<SectionTitle title='Recent Blog Posts' />
 			<Row>
@@ -38,6 +45,16 @@ PostTemplate.propTypes = {
 
 export default PostTemplate;
 
+export const PostTitle = styled.h1`
+	margin: 0;
+`;
+
+export const PostDate = styled.p`
+	font-size: 1.8rem;
+	color: var(--grey-300);
+	margin-top: 0;
+`;
+
 export const query = graphql`
 	query PostQuery($slug: String!) {
 		post: markdownRemark(fields:{slug:{eq: $slug}}) {
@@ -49,6 +66,7 @@ export const query = graphql`
 					childImageSharp {
 						fluid {
 							...GatsbyImageSharpFluid_withWebp_noBase64
+							src
 						}
 					}
 				}

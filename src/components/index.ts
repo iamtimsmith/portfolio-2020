@@ -12,3 +12,4 @@ export {PageTitle} from 'components/pageTitle/pageTitle';
 export {FeaturedImage} from 'components/featuredImage/featuredImage';
 export {Content} from 'components/content/content';
 export {ContactForm} from 'components/contactForm/contactForm';
+export {Share} from 'components/share/share';
