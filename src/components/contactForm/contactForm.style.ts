@@ -1,4 +1,12 @@
 import styled from 'styled-components';
+import {IAlert} from './contactForm.i';
+
+export const Alert = styled.p<IAlert>`
+	color: ${(props) =>
+		props.status === 'success' ? `var(--teal-500)` :
+		props.status === 'error' ? 'red' :
+		'black'}
+`;
 
 export const Field = styled.div`
 	margin-top: 20px;

@@ -51,7 +51,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 					<h3>{title.text}</h3>
 				}
 				<Tags>
-					{tags.split(/\,? /ig).map(tag => <Tag>{tag}</Tag>)}
+					{tags.split(/\,? /ig).map((tag, i) => <Tag key={i}>{tag}</Tag>)}
 				</Tags>
 				{content &&
 					<Markdown dangerouslySetInnerHTML={{__html: content}} />
