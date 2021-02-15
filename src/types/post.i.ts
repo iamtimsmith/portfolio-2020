@@ -3,7 +3,7 @@ import {FluidObject} from 'gatsby-image';
 export interface IPost {
 	frontmatter: {
 		title: string;
-		descriptions: string;
+		description: string;
 		tags: string;
 		featured_image: {
 			childImageSharp: {

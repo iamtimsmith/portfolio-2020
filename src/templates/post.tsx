@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
-import {Layout, FeaturedImage, SectionTitle, Row, Summary, Content, Share} from 'components';
+import {Layout, FeaturedImage, SectionTitle, Row, Summary, Content, Share, SEO} from 'components';
 import {IPost, IPostTemplate} from 'types';
 
 const PostTemplate = ({data}: IPostTemplate) => {
@@ -11,6 +11,10 @@ const PostTemplate = ({data}: IPostTemplate) => {
 
 	return (
 		<Layout>
+			<SEO
+				title={frontmatter.title}
+				description={frontmatter.description}
+			/>
 			<FeaturedImage fluid={frontmatter.featured_image.childImageSharp.fluid} alt={frontmatter.title} />
 			<PostTitle>{frontmatter.title}</PostTitle>
 			<PostDate>{dayjs(fields.date).format(`MMMM D, YYYY`)}</PostDate>
