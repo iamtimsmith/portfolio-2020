@@ -14,6 +14,8 @@ const PostTemplate = ({data}: IPostTemplate) => {
 			<SEO
 				title={frontmatter.title}
 				description={frontmatter.description}
+				image={frontmatter.featured_image.childImageSharp.fluid.src}
+				slug={fields.slug}
 			/>
 			<FeaturedImage fluid={frontmatter.featured_image.childImageSharp.fluid} alt={frontmatter.title} />
 			<PostTitle>{frontmatter.title}</PostTitle>
