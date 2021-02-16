@@ -1,6 +1,6 @@
 import {useStaticQuery, graphql} from 'gatsby';
 
-export const useNotFound = () => {
+export const useNotFoundQuery = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			heroImage: file(name: {eq:"page-not-found"}) {

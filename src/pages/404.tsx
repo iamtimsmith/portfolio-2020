@@ -1,10 +1,10 @@
 import React from "react";
 import {Layout, Hero, Row, Summary, SEO} from 'components';
 import {IPost} from 'types';
-import {useNotFound} from 'hooks';
+import {useNotFoundQuery} from 'hooks';
 
 const NotFoundPage = () => {
-	const {heroImage, recentPosts} = useNotFound();
+	const {heroImage, recentPosts} = useNotFoundQuery();
 	console.log(heroImage);
 	return (
 		<Layout>
