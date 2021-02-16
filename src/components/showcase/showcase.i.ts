@@ -14,6 +14,7 @@ export interface IProps {
 		image?: boolean;
 	};
 	align: string;
+	mobile?: boolean;
 	date?: {
 		date: Date | string;
 		year?: boolean;
@@ -24,6 +25,7 @@ export interface IProps {
 
 export interface IShowcase {
 	align: string;
+	mobile?: boolean;
 	opacity?: number;
 	show?: boolean;
 	link?: boolean;

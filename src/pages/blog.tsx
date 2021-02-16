@@ -17,6 +17,7 @@ const BlogPage = () => {
 				tags={blog.nodes[0].frontmatter.tags}
 				link={{to: blog.nodes[0].fields.slug, text: `Read More`, title: true, image: true}}
 				align='right'
+				mobile
 			/>
 			<Row>
 				{blog.nodes.map((post: IPost, id: number) => {

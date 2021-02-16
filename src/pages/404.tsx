@@ -5,7 +5,7 @@ import {useNotFoundQuery} from 'hooks';
 
 const NotFoundPage = () => {
 	const {heroImage, recentPosts} = useNotFoundQuery();
-	console.log(heroImage);
+
 	return (
 		<Layout>
 			<SEO title='404' />

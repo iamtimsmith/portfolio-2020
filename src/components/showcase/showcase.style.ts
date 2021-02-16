@@ -20,7 +20,7 @@ export const Section = styled.section`
 export const Image = styled.figure<IShowcase>`
 	position: relative;
 	flex: 2;
-	order: 2;
+	order: ${(props) => props.mobile ? 1 : 2};
 	margin: 0;
 
 	${media.desktop} {
@@ -39,7 +39,7 @@ export const Content = styled.article<IShowcase>`
 	position: relative;
 	text-align: left;
 	flex: 2;
-	order: 1;
+	order: ${(props) => props.mobile ? 1 : 2};
 	padding: 15px;
 	position: relative;
 	${props => props.align}: -30px;
@@ -73,11 +73,15 @@ export const Markdown = styled.div`
 	margin: 30px 0;
 `;
 
-export const Tags = styled.div`
+export const Tags = styled.div<IShowcase>`
 	color: var(--grey-300);
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
+
+	${media.desktop} {
+		justify-content: ${(props) => props.align === `right` ? `flex-end` : `flex-start`};
+	}
 `;
 
 export const Tag = styled.span`

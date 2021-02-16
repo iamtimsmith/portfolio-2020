@@ -6,7 +6,7 @@ import {Link} from 'components';
 import {Section, Image, Content, Markdown, Button, Tags, Tag} from './showcase.style';
 import {IProps} from './showcase.i';
 
-export const Showcase = ({image, title, content, link, align='right', date, tags, button=false}: IProps) => {
+export const Showcase = ({image, title, content, link, align='right', date, tags, button=false, mobile=false}: IProps) => {
 	const section = useRef<HTMLElement>(null);
 	const [show, setShow] = useState(false);
 
@@ -24,7 +24,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 
 	return (
 		<Section ref={section} data-testid='showcase'>
-			<Image align={align} link={link ? link.image : false}>
+			<Image align={align} mobile={mobile} link={link ? link.image : false}>
 				{link && link.image &&
 					<Link to={link.to}>
 						<Img fluid={image} alt={title.text} />
@@ -32,7 +32,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 				}
 				{(!link || !link.image) && <Img fluid={image} alt={title.text} />}
 			</Image>
-			<Content align={align} show={show}>
+			<Content align={align} mobile={mobile} show={show}>
 				{date && <small data-testid='date'>{dayjs(date.date).format(date.year ? `YYYY` : `MM-DD-YYYY`)}</small>}
 				{(link && link.title) && title.type === `h2` &&
 					<h2>
@@ -50,7 +50,7 @@ export const Showcase = ({image, title, content, link, align='right', date, tags
 				{(!link || !link.title && title.type === `h3`) &&
 					<h3>{title.text}</h3>
 				}
-				<Tags>
+				<Tags align={align}>
 					{tags.split(/\,? /ig).map((tag, i) => <Tag key={i}>{tag}</Tag>)}
 				</Tags>
 				{content &&
@@ -78,6 +78,7 @@ Showcase.propTypes = {
 	]),
 	link: PropTypes.object,
 	align: PropTypes.string,
+	mobile: PropTypes.bool,
 	date: PropTypes.object,
 	tags: PropTypes.string,
 	type: PropTypes.string,
