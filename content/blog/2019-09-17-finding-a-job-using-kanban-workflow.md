@@ -35,7 +35,7 @@ My preferred tool for using this workflow is Notion. There are a few functionali
 
 Setting up the board should be relatively simple, regardless of which tool you choose. The number of columns your board has is really up to you, but at a minimum I'd have the columns pictured below:
 
-![What your finished board should look like](/2019/trello-board-setup.jpg)
+![What your finished board should look like](../images/2019/trello-board-setup.jpg)
 
 ## Kanban board setup for finding a job
 
@@ -73,7 +73,7 @@ To prevent the issue I mentioned earlier with the job listing being removed, I a
 
 What your card should look like in the Opening column:
 
-![A card in the openings column](/2019/card-in-opening.jpg)
+![A card in the openings column](../images/2019/card-in-opening.jpg)
 
 ### When the card is in the Applied column
 

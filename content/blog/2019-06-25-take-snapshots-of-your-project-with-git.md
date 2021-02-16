@@ -14,7 +14,7 @@ If you're anything like I used to be, a ton of your hard drive is eaten up by se
 
 If you've been around in the development world for a while, you've probably heard of Git. If you're just starting out as a developer, then let me be the first to welcome you and tell you that you've made a good investment by learning Git. I would argue that it is one of the most important things you can learn in terms. It doesn't take long to get the fundamentals down, but will pay dividends in no time at all.
 
-![I'm using git, so you could say it's getting pretty serious](/2019/napoleon-meme.jpg)
+![I'm using git, so you could say it's getting pretty serious](../images/2019/napoleon-meme.jpg)
 
 Today we're going to cover those basics so you can start using git in your projects and saving yourself a lot of time, energy, and hard drive space. Let's get started!
 

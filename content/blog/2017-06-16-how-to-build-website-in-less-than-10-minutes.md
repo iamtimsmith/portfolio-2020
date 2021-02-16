@@ -18,7 +18,7 @@ If you just google “Wordpress”, you’re likely to come up with quite a few 
 
 At first glance, Wordpress.com and Wordpress.org can seem like the same thing. For the most part, they perform the same task: providing an easy-to-use interface to help write and manage your website and the content you create. The major difference between the two is hosting.
 
-![Wordpress](/2017/wordpress-rocket-blasting-off.jpg)
+![Wordpress](../images/2017/wordpress-rocket-blasting-off.jpg)
 
 A Wordpress.com website is a fully-hosted website meaning that if you create a website there, your web address will be something like example.Wordpress.com. The options for a website with Wordpress.com are also fewer. There are a small number of themes to choose from when deciding on an appearance for your site when using the fully-hosted platform. Overall, Wordpress.com just has a lot less ability in terms of customizations than Wordpress.org.
 
@@ -36,29 +36,29 @@ I will be using Hostgator to provide screenshots, but most hosting providers sho
 
 To begin our website setup, we will need to log in to our hosting provider. Once you are in, most panels will have a button that says something like “Install Wordpress”. In my case, it says “Wordpress — 1 Click Installation”.
 
-![Installing Wordpress](/2017/cpanel-admin-page.jpg)
+![Installing Wordpress](../images/2017/cpanel-admin-page.jpg)
 
 Next we are taken to a screen which asks us to select the domain we will be using for our Wordpress installation. I will be using a domain called wpinstall.iamtimsmith.com for this demonstration.
 
-![Select domain for installation](/2017/installing-wordpress-through-cpanel.jpg)
+![Select domain for installation](../images/2017/installing-wordpress-through-cpanel.jpg)
 
 The following page will ask for some information for our website such as the title of our blog (or website), the desired admin username, first name, last name, and an email address for the admin. My screen also shows a checkbox that says automatically create new database for this installation. Leave this checked for a simple setup. If this is unchecked, you will either need to create a database yourself or hire someone to do it for you. Once this is completed we can finish our installation of Wordpress.
 
-![Settings for WordPress](/2017/choosing-wordpress-installation-settings.jpg)
+![Settings for WordPress](../images/2017/choosing-wordpress-installation-settings.jpg)
 
 After Wordpress finishes the installation, you will be provided with details regarding the installation. These details include the domain to which Wordpress was installed, the username that was entered, and a long and complicated password. I would HIGHLY recommend copying this password down somewhere so you don’t forget it. Once we have copied the information, we can click the login button.
 
-![Installation Complete](/2017/wordpress-installation-details.jpg)
+![Installation Complete](../images/2017/wordpress-installation-details.jpg)
 
 #### 2. Customizing Your Website
 
 We are now taken to a login screen where we will enter the username and password we were just given. Upon logging in, you are taken to the dashboard where you are presented with a set of prompts asking about your site. The first question is whether your site will be a business or personal site. The next question asks whether your site will have a blog or not. Wordpress will then take you through a few pages to set up such as contact and about pages.
 
-![Login to Wordpress](/2017/logging-into-wordpress.jpg)
+![Login to Wordpress](../images/2017/logging-into-wordpress.jpg)
 
 If we click the Customize button, we are taken to a screen where we can change some details on our site. This will also give us a preview of what our site will look like. By default, Wordpress gives all new websites the Twenty Seventeen theme. If you are satisfied with the layout, then you can finish with your customizations and then publish your site.
 
-![Wordpress Customizer](/2017/using-wordpress-customizer.jpg)
+![Wordpress Customizer](../images/2017/using-wordpress-customizer.jpg)
 
 #### 3. Choosing A Theme and Making it Active
 
@@ -66,17 +66,17 @@ We do have options for other layouts if you aren’t infatuated with the default
 
 The Themes page will show us all of the themes we currently have installed and tell us which one is currently active. At the bottom of the grid is a big plus sign that says “Add New Theme”. To get a new theme for our site, we will click this button.
 
-![Themes](/2017/choosing-themes-in-wordpress.jpg)
+![Themes](../images/2017/choosing-themes-in-wordpress.jpg)
 
 We have now reached Wordpress’ catalog of themes. This page allows you to filter the results by various settings that you’d like for your website. For simplicity, I’m going to choose a theme called Sydney. I would encourage you to do some exploring and check out the preview for some different themes. This may help to give you a better idea of what you want and don’t want for your website. To select a new theme for our site, click install and then click activate.
 
-![Add themes](/2017/adding-a-theme-to-wordpress.jpg)
+![Add themes](../images/2017/adding-a-theme-to-wordpress.jpg)
 
 Now that we have a new theme active, we can go back to the customization screen to modify it to our liking. To reach the customization screen again, simply hover over the appearance item in the left menu and this time click Customize. Once back on the customization screen, we can open the various tabs on the left and change our info to match our needs.
 
 #### 4. Adding Pages to your website
 
-![Adding pages to your website](/2017/adding-pages-to-wordpress.jpg)
+![Adding pages to your website](../images/2017/adding-pages-to-wordpress.jpg)
 
 Okay, so we have installed Wordpress and picked a theme. Now what? The next step is to add pages to our site. Wordpress makes this pretty easy too. When you are in the dashboard, there is a button in the left menu that says Pages. Clicking on this will take us to the Pages page. Here we can view all of the static pages on our site. Our site has a few pages already, including Contact us, Home Page, and Sample Page. If you’d like to edit any of these, simply click on the page title. To create a new page, click the Add New button at the top of the Pages page.
 
@@ -84,7 +84,7 @@ Each page can be edited with the included text editor and we can add media, styl
 
 #### 5. Adding Posts to your website
 
-![Adding Posts to your website](/2017/adding-posts-to-wordpress.jpg)
+![Adding Posts to your website](../images/2017/adding-posts-to-wordpress.jpg)
 
 This process is very similar to adding a page to our site. To add a new post, hover over the Posts button on the left and select Add New. We are now taken to a page with a spot for a title and content to contain in our post. Photos and videos can also be added to your post by clicking Add Media and uploading the image to Wordpress. On the right hand side, there is also a spot for any tags and categories you’d like to assign to your post. Adding these to your post will make it easier for your readers to find content relevant to their interests.
 
@@ -92,7 +92,7 @@ Once we have finished creating our post, we can either publish it immediately or
 
 #### 6. Setting up a Menu
 
-![Setting up a Menu](/2017/editing-menus-in-wordpress.jpg)
+![Setting up a Menu](../images/2017/editing-menus-in-wordpress.jpg)
 
 Like most things with Wordpress, setting up a menu for your site is pretty simple. To do so, we will go to our menu on the left, hover over Appearance, and select Menus. This will take us to a page which allows us to customize the menu items that are displayed on our website. On the left, we can see a list with all of the pages we’ve created, all of the posts on our website, and even a spot for a custom link. To create a menu, type a name into the Menu Name field and click Create Menu. Once the menu has been created, simply drag and drop the items you want into the available slots. We will be able to change and rearrange the items in this list any time we want.
 
@@ -118,4 +118,4 @@ Lately I’ve also been using this plugin to create sharing icons. It’s pretty
 
 Now that we have set up our site using the Wordpress CMS, you are ready to begin sharing your site with the world. Hopefully you found this to be a simple-to-understand guide on setting up a Wordpress site. With your new experience in the Wordpress CMS, you will be equipped to modify your site as necessary. While there are more things that can be learned about Wordpress, you now have a firm grasp of the fundamentals.
 
-![How To Build A Website In Less Than 10 Minutes](/2017/how-to-build-website-in-less-than-10-minutes-pinterest.jpg)
+![How To Build A Website In Less Than 10 Minutes](../images/2017/how-to-build-website-in-less-than-10-minutes-pinterest.jpg)

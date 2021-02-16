@@ -176,7 +176,7 @@ require get_template_directory() . '/blocks/blocks.php';
 
 Although it doesn't matter where in your `functions.php` file you place the code, I tend to put it at the bottom. Especially if you're using the underscores theme, it helps to keep your code separated from the default theme code.
 
-![You have taken your first step into a larger world](/2019/benkenobi.jpg)
+![You have taken your first step into a larger world](../images/2019/benkenobi.jpg)
 
 ## Wrapping Up
 

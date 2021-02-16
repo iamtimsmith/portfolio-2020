@@ -121,7 +121,7 @@ gatsby develop
 
 After running that command, we can visit [localhost:8000](http://localhost:8000) in the browser and we should see the site pictured below:
 
-![Initial appearance of Gatsby js starter](/2019/gatsby-starter.jpg)
+![Initial appearance of Gatsby js starter](../images/2019/gatsby-starter.jpg)
 
 The site provides a navbar with a link going back to the homepage. There is also a bit of content with a link to page 2 which then provides a link back to page 1. It's very simple, but already we can see how fast gatsby js is.
 
@@ -216,7 +216,7 @@ If the gatsby site is currently running, we need to stop it and restart it so it
 
 Once we've restarted our server, we can visit [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql) to use the "graphical" playground. Here, we can use graphql to query our data for testing purposes. We should create opening and closing curly braces and then we can use shift+space (ctrl+space on windows) to get suggestions. Once we have the data we want, we will be able to paste the query into our components, pages, and templates so we can use the information available. Here's what my query looks like for now:
 
-![GraphQL query tests](/2019/graphiql-interface.jpg)
+![GraphQL query tests](../images/2019/graphiql-interface.jpg)
 
 You may notice that there are several drilldowns inside of the `acf` field. This is saying "hey, look for the acf field called feat_img and get the local, optimized versions of these images so we can use them". Gatsby also provides fragments which means inside of gatsby we could just put `...GatsbyImageSharpSizes` instead of drilling down so far and gatsby will know what to do with it.
 
@@ -306,7 +306,7 @@ Just like before, we will need to restart our development server to see these ch
 
 We can now see all of the pages available and clicking on one should take us to the blog post template we created earlier that just shows Hello World. If this is what you're seeing, congrats! You're ready to move to the next section.
 
-![See a list of pages on the development 404 page](/2019/gatsby-404.jpg)
+![See a list of pages on the development 404 page](../images/2019/gatsby-404.jpg)
 
 ## Updating Our Blog Post Template
 
@@ -374,7 +374,7 @@ The SEO component allows us to pass in dynamic data such as title, description, 
 
 Here's what our completed Blog Post looks like after we update the template:
 
-![Completed Blog Post Page](/2019/gatsby-post.jpg)
+![Completed Blog Post Page](../images/2019/gatsby-post.jpg)
 
 ## Wrapping up Blog Posts
 

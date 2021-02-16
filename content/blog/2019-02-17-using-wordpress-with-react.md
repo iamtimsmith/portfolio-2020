@@ -33,7 +33,7 @@ Lets take a look at a Wordpress site so you can see exactly what I'm talking abo
 
 By simply adding `/wp-json/wp/v2/posts` to the end of the url, we will see a JSON output of all of the most recent posts. By simply changing `posts` to `pages`, [we can see the data for the pages in the TechCrunch site](https://techcrunch.com/wp-json/wp/v2/pages).
 
-![TechCrunch Posts API](/2019/techcrunch-posts-api.jpg)
+![TechCrunch Posts API](../images/2019/techcrunch-posts-api.jpg)
 
 We can [try out different options](https://developer.wordpress.org/rest-api/reference/) like `posts`, `pages`, `users`, and more. Go ahead and play around to see what data you can find. This will allow us to decide what we want to use and what we don't.
 
@@ -168,7 +168,7 @@ If you're developing React applications often, I would recommend installing the 
 
 We can now check our state to make sure that it is being populated correctly from our `componentDidMount` lifecycle method. To do this, open developer tools in your browser and go to the react tab. Then we can drill down in the structure until we find our `PostList` component and the pane on the right shows our state and props.
 
-![Check react js devtools to make sure state is being assigned](/2019/react-devtools.jpg)
+![Check react js devtools to make sure state is being assigned](../images/2019/react-devtools.jpg)
 
 Since we have all of the posts in our state, we can create a render method with structure for our page. To do this in a simple way, we can use a `map()` function which will iterate over each item in an array. Our render method can go after our `componentDidMount` method with the following code.
 

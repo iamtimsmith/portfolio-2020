@@ -44,7 +44,7 @@ Github has some functionality built in with kanban to keep track of issues with 
 
 Although there are a lot of paid services, my experience with them is limited to Jira. Made by Atlassian (the people who made Bitbucket and Confluence), it has some good things and some not-so-good things. I like the way it separates the backlog and the current sprint (assuming you're doing sprints, more on this later). Jira also offers reporting which can be very important if there are multiple developers working on the same project. For a freelancer, this may not matter. On the downside, it can be somewhat pricy for a small freelance agency or individual. In addition, it can have some weirdness in the user interface at times and it seems that things change willy-nilly which can be a bit confusing at times.
 
-![Post-its & Index cards](/2019/postit.jpg)
+![Post-its & Index cards](../images/2019/postit.jpg)
 
 ## How do I set up a kanban board?
 
@@ -63,7 +63,7 @@ Once your columns are created, you can begin creating items, or cards. Each of t
 
 Cards will typically have a title and description for details about the task, but you can also typically add a label, or epic as they're sometimes called. This is a way of grouping cards together if they are focusing on related items. An example could be as follows:
 
-![Labelling can help keep things together](/2019/epics.jpg)
+![Labelling can help keep things together](../images/2019/epics.jpg)
 
 Cards can have as many or as few labels as you'd like, depending on your organizational structure. Typically I just give them one label which relates to the overal goal I'm trying to achieve. If you're using an application to do this, you can often filter by label as well making it easy to see the status of everything relating to that goal. This ability can greatly help when it comes to finishing projects on time.
 

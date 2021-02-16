@@ -107,7 +107,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 Just like before, we can test this to make sure the pages were created as expected by starting our development server and visiting [localhost:8000/stuff](http://localhost:8000/stuff) and getting a list of all of the available pages. Again, this is only available in a development environment since a live site will show a different 404 page. We should see an `/about` page and a `/sample-page` page in there. If so, our gatsby-node.js file worked and we can update the template to show the data we want.
 
-![See a list of available pages](/2019/gatsby-404.jpg)
+![See a list of available pages](../images/2019/gatsby-404.jpg)
 
 ## Updating the Page Template
 
@@ -256,7 +256,7 @@ export const query = graphql`
 
 And here's what it looks like when we visit the homepage of our blog:
 
-![Finished blog home page](/2019/gatsby-posts.jpg)
+![Finished blog home page](../images/2019/gatsby-posts.jpg)
 
 It's looking pretty good so far. We're getting pretty close to being done, we just have a few more things to change and we're ready to start blogging!
 
@@ -287,7 +287,7 @@ The title we're seeing in the header comes from the title listed here. We can ch
 
 Since we are building a blog using WordPress and want our users to have full control over the data, we should get our site name from WordPress so if it ever changes the user can update it. Fortunately, WordPress makes this available to us through the API, so we can query it in graphql like so:
 
-![Graphql query to get siteName from WordPress](/2019/graphiql-sitename.jpg)
+![Graphql query to get siteName from WordPress](../images/2019/graphiql-sitename.jpg)
 
 Using queries works a bit differently inside of components. Rather than just writing a query which drops data into our page or template, we have to use a new component called `StaticQuery` which is designed specifically for using queries inside of components.
 
@@ -389,7 +389,7 @@ export default Header
 
 The header component above looks a little different than it originally did, but as we start to dig into it a bit more we can see it hasn't changed much. We essentially just wrapped our header in the StaticQuery component and then ran our query inside of that component to give the header the necessary data. Simple, right?
 
-![Our Gatsby js blog after updating the header component](/2019/gatsby-header.jpg)
+![Our Gatsby js blog after updating the header component](../images/2019/gatsby-header.jpg)
 
 ### Adding a Menu to the Header
 
@@ -474,7 +474,7 @@ module.exports = {
 
 If you look at the code above, you'll notice we have added two new routes to the gatsby-source-wordpress. These routes are created automatically by the plugin inside of WordPress without any additional configuration. Remember, after making changes to files outside of the src folder, we need to restart our development server by running `gatsby develop`. After restarting, we can visit [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql) and query for the menu information, which will like like the screenshot below.
 
-![GraphiQL query to get menu items from WordPress](/2019/graphiql-menu-items.jpg)
+![GraphiQL query to get menu items from WordPress](../images/2019/graphiql-menu-items.jpg)
 
 The final step is to add this query into our static query and create the menu itself in the header component. We can just drop this in under the wordpressSiteMetadata piece. Once we have it added into the query, we can just use a `map()` function to iterate over the menu items and create it dynamically, allowing the user to update it through WordPress. Doing it this way does require us to specify which menu we want, so we need the name of the menu which is set in WordPress. In this case, our menu is called Main Menu so we will use that in our query.
 
@@ -551,7 +551,7 @@ export default Header
 
 That's a good looking component! Let's see what it looks like when we visit the site:
 
-![Blog after adding menu to header](/2019/gatsby-with-menu.jpg)
+![Blog after adding menu to header](../images/2019/gatsby-with-menu.jpg)
 
 ## Wrapping up
 

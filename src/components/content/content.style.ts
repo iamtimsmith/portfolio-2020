@@ -10,6 +10,16 @@ export const RenderContent = styled.div`
 		margin: 0 0 30px;
 	}
 
+	figure {
+		margin-bottom: 0;
+
+		figcaption {
+			font-size:1.8rem;
+			text-align: center;
+			color: var(--grey-400);
+		}
+	}
+
 	video, img {
 		display: block;
 		margin: 40px auto;

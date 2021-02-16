@@ -30,16 +30,16 @@ As a quick side note, if you're looking for stuff to do on a flight: I highly re
 We arrived in Seattle around 10:30am and made our way to the hotel. Our hotel was right next to the conference center and within walking distance of a lot of things, so after getting everything dropped off, we decided to go adventuring a bit.
 
 
-![The place from sleepless in seattle](/2019/sleepless_in_seattle1.jpg)
-![The place from sleepless in seattle](/2019/sleepless_in_seattle2.jpg)
+![The place from sleepless in seattle](../images/2019/sleepless_in_seattle1.jpg)
+![The place from sleepless in seattle](../images/2019/sleepless_in_seattle2.jpg)
 
 We stretched our legs and started looking for some lunch, when we came across a bar with some seafood and american food. We had lunch and decided to keep exploring the downtown area. We found the Pike Place Market and wanted to see more of that. Immediately I remembered the scene in Sleepless in Seattle with the Pike Place market and had to snap a shot which matched. It was pretty cool how little it had changed.
 
 First we found the infamous gum wall where Griffin had to get some pictures. In case you're unfamiliar with this (I hadn't ever heard of it), it's a little tunnel where people have stuck their used gum for quite some time.
 
-![The infamous Gum Wall](/2019/gum_wall.jpg)
+![The infamous Gum Wall](../images/2019/gum_wall.jpg)
 
-![My first experience with Indian Food](/2019/indian_food.jpg)
+![My first experience with Indian Food](../images/2019/indian_food.jpg)
 
 After wandering through this hall, we came across [a brewery](https://www.pikebrewing.com/) and decided to relax for a bit. We talked about everything from Drupal to movies and comic books. We stayed there and talked for a few hours before deciding to seek out some dinner. We'd heard of the Pink Door but found out it was really busy so we wouldn't be able to eat there. While we were making our way to the Pink Door, we found a little indian restaurant and decided to eat there. I hadn't ever had indian food but made it a sort of mantra that I was going to try new things on this trip.
 
@@ -47,7 +47,7 @@ I liked the indian food a lot and we had great conversation. Our previous conver
 
 Getting back to my hotel room and seeing Seattle at night was pretty awesome. It certainly left me feeling excited to be there and ready for the next day.
 
-![The view from my hotel room](/2019/view_from_hotel.jpg)
+![The view from my hotel room](../images/2019/view_from_hotel.jpg)
 
 ## Day 2: First Training
 
@@ -55,8 +55,8 @@ Monday started early for me since I was still on midwest time. I woke up and sta
 
 I've only been working in Drupal for about 6 months at this point and even then, it's in Drupal 7. We're looking to move to Drupal 8 this year, so the class I took on Monday was Module Development with Mike Anello from [DrupalEasy](https://www.drupaleasy.com/). I learned a lot and even made a couple of new friends (one of whom was in the training with me).
 
-![Sushi](/2019/sushi1.jpg)
-![Sashimi](/2019/sushi2.jpg)
+![Sushi](../images/2019/sushi1.jpg)
+![Sashimi](../images/2019/sushi2.jpg)
 
 After our trainings had wrapped up Andy, Griffin, and I went to go find dinner. After some debate, we ended up going to a sushi restaurant. I've never cared for sushi but decided this trip was about trying new things so I went with it. We got sashimi and a bunch of rolls to share. What do you know? I liked it a lot. I even got it on my birthday after we got back home. Dinner wrapped up and we decided to do a bit of walking around and shopping before going back to the hotel. We found some neat boutiques and eventually found an arcade bar. Griffin was super excited about finding the biggest foosball table he'd ever seen. We played a few games and we were both winded by the end of the first game because so much running was involved to get from one end of the table to the other.
 
@@ -70,9 +70,9 @@ After the training let out, the exhibition hall opened up for people to check ou
 
 Once we left the exhibition hall, we heard about a party being put on by Pantheon at the Museum of Pop Culture so we decided to go to that. Before going to the party, we found some food at a small but [delicious pizza restaurant](https://www.seriouspieseattle.com/downtown). We got 3 pizzas with different toppings as well as some local beers. Overall, it was pretty tasty. For desert, we had stout floats with another local brew. If you're in the mood for artisan pizza and some Seattle beers, I recommend Serious Pies.
 
-![Serious Pie pizza](/2019/serious_pie1.jpg)
-![Serious Pie pizza](/2019/serious_pie2.jpg)
-![Serious Pie pizza](/2019/serious_pie3.jpg)
+![Serious Pie pizza](../images/2019/serious_pie1.jpg)
+![Serious Pie pizza](../images/2019/serious_pie2.jpg)
+![Serious Pie pizza](../images/2019/serious_pie3.jpg)
 
 After having dinner, we had a bit of a walk to the party so we started making the trek there. We talked about work related topics as well as other things we'd been learning or hearing about at Drupalcon. We walked right past the Space Needle on our way there which was cool. Arriving at the party, we were greeted with a nightclubish sort of feeling. 90s and early 00s music played on the stereo and we were given a few free drink tickets.
 
@@ -84,15 +84,15 @@ Also on the main floor was an indie game room to try out games on various consol
 
 We caught Lyft back to the hotel and discussed all of the cool things we'd seen at the party before heading to bed in preparation for the Driesnote first thing in the morning.
 
-![We walked by the Space Needle](/2019/space_needle.jpg)
-![The Pantheon party looked like a swanky nightclub!](/2019/pantheon_party.jpg)
+![We walked by the Space Needle](../images/2019/space_needle.jpg)
+![The Pantheon party looked like a swanky nightclub!](../images/2019/pantheon_party.jpg)
 
 ## Day 4: The Driesnote, Sessions, and the MediaCurrent Party
 
 Day 4 started bright and early with the Driesnote, the keynote speech by Drupal founder Dries Buytaert. I ended up sitting right behind him and actually got to meet him after the Driesnote had concluded. He was a really cool guy who seemed very interested in the community and actually took the time to learn my name. Certainly not what I expected from someone in his position!
 
-![Getting to see the Driesnote from the 3rd row](/2019/driesnote2.jpg)
-![Getting to see the Driesnote from the 3rd row](/2019/driesnote.jpg)
+![Getting to see the Driesnote from the 3rd row](../images/2019/driesnote2.jpg)
+![Getting to see the Driesnote from the 3rd row](../images/2019/driesnote.jpg)
 
 After the Driesnote, sessions began. Sessions are like 30 or 90 minute lectures on a given topic. There are tons of sessions available on a variety of topics and you pick the ones that sound interesting and attend. I decided to attend a session called OOP: The Quest for Pokémon to brush up on my object oriented programming.
 
@@ -108,8 +108,8 @@ The first session I went to was called Harry Potter and the Linux Command Line I
 
 We didn't really have anything planned after the sessions and this was our last night in Seattle, so we decided to wing it. Andy and I were wandering around looking for something to eat and we walked past a bar that smelled like really good pizza. We went in and checked the place out. It just so happens that Thursdays were all-day happy hour so we grabbed a booth. Griffin met us there shortly after we found it and we ordered beers and pizzas, then got out the trusty game we'd been playing all week while we waited for food. It's called "Love Letter", but it was the Batman edition.
 
-![Saying goodbye to the convention center](/2019/convention_center.jpg)
-![Playing Batman Love Letter at the Pizza Mart](/2019/at_the_bar.jpg)
+![Saying goodbye to the convention center](../images/2019/convention_center.jpg)
+![Playing Batman Love Letter at the Pizza Mart](../images/2019/at_the_bar.jpg)
 
 We played for a while while _It's Always Sunny in Philadelphia_ played on the TV. After a while, a few of our friends from Drupalcon met us there and we discovered the bar had board games. We all enjoyed a few rounds of Cards Against Humanity while we also told stories and joked around. Eventually, our friends decided to call it a night since their flights left the next morning. Andy, Griffin, and I stuck around and started talking about work. We talked about friendships within the workplace, how we felt about some recent process changes, and how we could improve on-boarding for anyone joining the team. It's easily the closest I've felt to them, which allowed us to have in-depth conversations rather than just banter here and there.
 
@@ -117,7 +117,7 @@ We played for a while while _It's Always Sunny in Philadelphia_ played on the TV
 
 We left on day 6 and headed home. None of us are particularly extroverted, so we were all very tired from the week of learning and socializing. Things went according to plan and we made it home in one piece. I relied on my trusty podcasts to keep me entertained on the trip. We even found some time to play the Love Letter game while we waited in the airport for one of our flights. It was a nice quiet end to one of the most fun weeks I've had in a long time.
 
-![Some cool fishes on the floor at the Seattle airport.](/2019/seattle_airport.jpg)
+![Some cool fishes on the floor at the Seattle airport.](../images/2019/seattle_airport.jpg)
 
 ## Takeaways
 
@@ -127,7 +127,7 @@ That was a lot of reading to get through my experience, sorry if it was a little
 
 You never know when you'll find something new that you like, but that can't happen if you aren't willing to try things. Being open to new experiences will not only expand your own horizons, but open the door to friendships you may otherwise never have.
 
-![You miss 100% of the shots you don't take -Wayne Gretzky -Michael Scott](/2019/michael_scott.jpg)
+![You miss 100% of the shots you don't take -Wayne Gretzky -Michael Scott](../images/2019/michael_scott.jpg)
 
 ### 2. Bring business cards to give out.
 

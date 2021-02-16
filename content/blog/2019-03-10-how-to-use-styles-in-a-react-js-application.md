@@ -349,7 +349,7 @@ This is obviously a pretty basic example but it's a simple way to get our feet w
 
 Styled Components are very nice because it allows us to throw our styles in the same file as our component rather than opening several different files to find the correct styles. Here is what our finished social card with Styled Components looks like:
 
-![Finished social card with Styled Components](/2019/styled-components.jpg)
+![Finished social card with Styled Components](../images/2019/styled-components.jpg)
 
 ## Using Sass in a React Application
 
@@ -539,7 +539,7 @@ Now we can go ahead and write the import statement in the app.scss file so we ar
 
 And just like that, here is the final Social Card component with our sass styles. It looks the same as the component did in Styled Components.
 
-![Final Social Card with Sass styles](/2019/sass.jpg)
+![Final Social Card with Sass styles](../images/2019/sass.jpg)
 
 ## Final thoughts on Sass vs Styled Components
 

@@ -211,7 +211,7 @@ ReactDOM.render(<App />, document.getElementById("app"));
 
 And here's a screenshot of our app homepage:
 
-![Homepage for MERN app with CRUD functionality](/2019/homepage.jpg)
+![Homepage for MERN app with CRUD functionality](../images/2019/homepage.jpg)
 
 As you can see, the `app.js` isn't anything complicated. It has a `<Router>` which allows us to set up routes in React js which render different components based on the url. Here are the other components being used in our React js application:
 

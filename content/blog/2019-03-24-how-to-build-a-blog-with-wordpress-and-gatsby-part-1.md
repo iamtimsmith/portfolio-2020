@@ -64,7 +64,7 @@ As I mentioned in my other blog post, WordPress exposes REST apis which can be u
 
 I also like to use WordPress at a subdomain such as `admin.example.com` so it is totally separate from the actual site.
 
-![Underscores Theme](/2019/underscores.jpg)
+![Underscores Theme](../images/2019/underscores.jpg)
 
 ## The WordPress Theme
 
