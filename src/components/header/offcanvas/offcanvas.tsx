@@ -21,7 +21,7 @@ export const Offcanvas = () => {
 
 	return (
 		<React.Fragment>
-			<Toggle onClick={() => handleToggle()} show={offcanvas}>
+			<Toggle onClick={() => handleToggle()} show={offcanvas} aria-label='Toggle'>
 				<span />
 				<span />
 			</Toggle>

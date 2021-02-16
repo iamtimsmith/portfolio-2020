@@ -1,4 +1,4 @@
-import React, {useState, createContext, Dispatch} from 'react';
+import React, {useState, createContext, Dispatch, SetStateAction} from 'react';
 
 interface IStore {
 	offcanvas: boolean;
