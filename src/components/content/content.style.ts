@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const RenderContent = styled.div`
 	h2, h3, h4 {
 		margin-top: 80px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin: 0 0 30px;
 	}
 
 	video, img {

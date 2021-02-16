@@ -6,14 +6,14 @@ import {Section, Copy, Content, Figure} from './hero.style';
 import {IHero} from './hero.i';
 
 
-export const Hero = ({title, content, image}: IHero) => {
+export const Hero = ({title, content, image, link}: IHero) => {
 	return (
 		<Section data-testid='hero'>
 			<Content>
 				<Copy>
 					<h1 dangerouslySetInnerHTML={{__html: title}} />
 					<p>{content}</p>
-					<Link to='#contact'>Get In Touch →</Link>
+					{link && <Link to={link.url}>{link.text}</Link>}
 				</Copy>
 				<Figure>
 					<Img fluid={image} alt={title} />

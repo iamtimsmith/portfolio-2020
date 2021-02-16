@@ -3,4 +3,5 @@ export interface ISeoProps {
 	description?: string;
 	image?: string;
 	slug?: string;
+	children?: JSX.Element;
 }

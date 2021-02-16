@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Layout, Showcase, PageTitle} from 'components';
+import {Layout, Showcase, PageTitle, SEO} from 'components';
 import {IProject} from 'types';
 import {useProjectsQuery} from 'hooks';
 
@@ -9,6 +9,7 @@ const ProjectsPage = () => {
 
 	return (
 		<Layout>
+			<SEO title='Projects' />
 			<PageTitle title='Projects' />
 			<React.Fragment>
 				{projects.nodes.map((project: IProject, id: number) => (

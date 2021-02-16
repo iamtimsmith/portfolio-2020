@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Layout, PageTitle, Showcase, Row, Summary} from 'components';
+import {Layout, PageTitle, Showcase, Row, Summary, SEO} from 'components';
 import {IPost} from 'types';
 import {useBlogQuery} from 'hooks';
 
@@ -8,6 +8,7 @@ const BlogPage = () => {
 	const {blog} = useBlogQuery();
 	return (
 		<Layout>
+			<SEO title='Blog' />
 			<PageTitle title='Blog' />
 			<Showcase
 				title={{text: blog.nodes[0].frontmatter.title, type: `h2`}}
