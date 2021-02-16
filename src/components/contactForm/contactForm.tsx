@@ -31,7 +31,7 @@ export const ContactForm = () => {
 	}
 
 	return (
-		<form onSubmit={e => handleForm(e)} name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field' role='form'>
+		<form onSubmit={e => handleForm(e)} name='contact' id='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field' role='form'>
 			{(status && alert) && <Alert role='alert' status={status}>{alert}</Alert>}
 			<input type="hidden" name="form-name" value="contact" />
 			<Field>
