@@ -73,9 +73,11 @@ export const Markdown = styled.div`
 	margin: 30px 0;
 `;
 
-export const Tags = styled.p`
+export const Tags = styled.div`
 	color: var(--grey-300);
 	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
 `;
 
 export const Tag = styled.span`
