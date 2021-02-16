@@ -126,7 +126,7 @@ module.exports = {
               allMarkdownRemark(
                 limit: 1000,
                 sort: {fields:[frontmatter___date], order: DESC}
-                filter: {fields:{fileAbsolutePath: {regex:"/blog/i"}}}
+                filter: {fileAbsolutePath: {regex:"/blog/i"}}
               ) {
                 nodes {
 									excerpt
