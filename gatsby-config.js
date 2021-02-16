@@ -12,6 +12,18 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-catch-links`,
+		{
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-85334980-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ['/dashboard/**'],
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'iamtimsmith.com',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -75,6 +87,74 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/images/timsmith-teal.png`, // This path is relative to the root of the site.
+      },
+    },
+		{
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  enclosure: {
+                    'url': `https://www.iamtimsmith.com/${edge.node.frontmatter.featured_image.childImageSharp.fluid.src}`,
+                    'size': 1000,
+                  }
+                })
+              })
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { fields: [frontmatter___date], order: DESC }
+                filter: { fields: { type: { eq: "posts" } } }
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      featured_image {
+                        childImageSharp {
+                          fluid {
+                            src
+                          }
+                        }
+                      }
+                    }
+										fields {
+											date(formatString: "MMMM DD, YYYY")
+										}
+                  }
+                }
+              }
+            }
+          `,
+            output: '/rss.xml',
+            title: 'Tim Smith RSS Feed',
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
