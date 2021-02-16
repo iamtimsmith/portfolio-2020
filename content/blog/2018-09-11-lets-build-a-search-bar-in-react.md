@@ -504,5 +504,5 @@ Running the application should now allow you to create, delete, and search tasks
 
 Was this helpful for you? If you run into any problems, let me know and I will get this tutorial updated. I have also added the codepen with the full code below so you can play around with it or compare code.
 
-<iframe height='462' scrolling='no' title='Searchbar in React' src='//codepen.io/iamtimsmith/embed/zJPzwN/?height=462&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/iamtimsmith/pen/zJPzwN/'>Searchbar in React</a> by Tim Smith (<a href='https://codepen.io/iamtimsmith'>@iamtimsmith</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='Searchbar in React' src='//codepen.io/iamtimsmith/embed/zJPzwN/?height=462&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/iamtimsmith/pen/zJPzwN/'>Searchbar in React</a> by Tim Smith (<a href='https://codepen.io/iamtimsmith'>@iamtimsmith</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

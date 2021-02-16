@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {FaLinkedinIn, FaTwitter, FaGithub, FaDev, FaEnvelope} from 'react-icons/fa';
 import {Link} from 'gatsby';
 import {Toggle, Aside, Nav, Social, Icon} from './offcanvas.style';
@@ -13,9 +13,10 @@ const sites = [
 ];
 
 export const Offcanvas = () => {
-	const {offcanvas, setOffcanvas} = useContext(Store);
+	const [offcanvas, setOffcanvas] = useState(false);
+	// const {offcanvas, setOffcanvas} = useContext(Store);
 
-	const handleToggle = (show: boolean = false) => {
+	const handleToggle = (show = offcanvas) => {
 		setOffcanvas(!show);
 	}
 

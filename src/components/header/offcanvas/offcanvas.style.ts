@@ -13,7 +13,7 @@ export const Toggle = styled.button<IOffcanvas>`
 
 	${props => props.show ? `
 		position: fixed;
-		top: 41px;
+		// top: 41px;
 		right: 15px;
 	` : ``}
 
@@ -91,6 +91,7 @@ export const Social = styled.nav`
 export const Icon = styled.a`
 	background: none;
 	font-size: 3rem;
+	padding: 0 15px;
 	svg {
 		fill: var(--grey-200);
 		transition: all 0.3s;
