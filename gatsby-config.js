@@ -107,15 +107,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ 'content:encoded': node.html }],
                   enclosure: {
-                    'url': `https://www.iamtimsmith.com/${edge.node.frontmatter.featured_image.childImageSharp.fluid.src}`,
+                    'url': `https://www.iamtimsmith.com/${node.frontmatter.featured_image.publicURL}`,
                     'size': 1000,
                   }
                 })
@@ -125,29 +125,25 @@ module.exports = {
             {
               allMarkdownRemark(
                 limit: 1000,
-                sort: { fields: [frontmatter___date], order: DESC }
-                filter: { fields: { type: { eq: "posts" } } }
+                sort: {fields:[frontmatter___date], order: DESC}
+                filter: {fields:{fileAbsolutePath: {regex:"/blog/i"}}}
               ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    fields { slug }
-                    frontmatter {
-                      title
-                      featured_image {
-                        childImageSharp {
-                          fluid {
-                            src
-                          }
-                        }
-                      }
-                    }
-										fields {
-											date(formatString: "MMMM DD, YYYY")
+                nodes {
+									excerpt
+									html
+									fields {
+										slug
+									}
+									frontmatter {
+										title
+										featured_image {
+											publicURL
 										}
-                  }
-                }
+									}
+									fields {
+										date(formatString: "MMMM DD, YYYY")
+									}
+								}
               }
             }
           `,
