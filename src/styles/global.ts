@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 		--teal-800: #0e3f35;
 		--teal-900: #001612;
 		// Typography
-		--sans-serif: sans-serif;
+		--sans-serif: 'Open Sans', arial, helvetica, sans-serif;
 		--h1: 3.6rem;
 		--h2: 3rem;
 		--h3: 2.4rem;
@@ -96,8 +96,12 @@ export const GlobalStyles = createGlobalStyle`
 			background-position: 0px 100%;
 		}
 	}
+	input, textarea, select {
+		background: var(--grey--0);
+	}
 	button, input[type='submit'] {
 		padding: 15px 25px;
+		color: var(--grey-900);
 		font-size: 2.2rem;
 		font-weight: 700;
 		text-transform: uppercase;
