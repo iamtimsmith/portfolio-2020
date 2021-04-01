@@ -3,7 +3,7 @@ title: Let's build a search bar using React Hooks
 tags: '#react'
 featured_image: ../images/2021/lets-build-a-search-bar-using-react-hooks.jpg
 keywords: 'react, react hooks'
-description: "In this post, I'll show you how to build a better SEO component which is optimized for both search engines and social sharing to help your marketing strategy."
+description: "In this post, I'll show you how to build a search bar component using React Hooks to make state management, lifecycle methods, and other things a piece of cake."
 published: true
 ---
 
