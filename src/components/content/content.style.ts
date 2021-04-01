@@ -20,6 +20,10 @@ export const RenderContent = styled.div`
 		}
 	}
 
+	li > p {
+		margin: 0;
+	}
+
 	video, img {
 		display: block;
 		margin: 40px auto;
